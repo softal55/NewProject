@@ -41,6 +41,7 @@ namespace New_project
             Console.WriteLine(s);
             sw.Close();
         }
+        //Give me some instructions to fix it , so i can complete the exercise
       
 
     }
