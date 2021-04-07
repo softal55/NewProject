@@ -17,31 +17,12 @@ namespace New_project
             // max:25 , min:0
             //5 print numbers in order
             // 0,1,3,5,12,20,25
-             Read();
-            Write();
+            FileRead.Read();
+           FileWrite.Write();
             Console.ReadLine();
         }
-        const string Filename = "File1.txt";
-        //When i run he tell me file not found
-       static void Read()
-       {
-           StreamReader sr = new StreamReader(Filename);
-           string data = sr.ReadLine();
-
-            
-            Console.WriteLine(data);
-            sr.Close();
-        }
-        // when i run this he don't put the number in File2
-        const string filename = "File2.txt";
-        static void Write()
-        {
-            StreamWriter sw = new StreamWriter(filename);
-            string s = "1 3 5 12 0 25 20  ";
-            Console.WriteLine(s);
-            sw.Close();
-        }
-        //Give me some instructions to fix it , so i can complete the exercise
+        
+        
       
 
     }
