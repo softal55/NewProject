@@ -6,4 +6,10 @@
     <RootNamespace>New_project</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="File1.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

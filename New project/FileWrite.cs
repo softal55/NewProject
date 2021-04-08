@@ -9,10 +9,12 @@ namespace New_project
         const string filename = "File2.txt";
          public static void Write()
          {
+            
             StreamWriter sw = new StreamWriter(filename);
-            string s = "1 3 5 12 0 25 20  ";
-            Console.WriteLine(s);
-            sw.Close();
+                string s = "1 3 5 12 0 25 20";
+                sw.WriteLine(s);
+                sw.Close();
+            
          }
     }
 }

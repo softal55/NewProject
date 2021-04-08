@@ -19,6 +19,10 @@ namespace New_project
             // 0,1,3,5,12,20,25
             FileRead.Read();
            FileWrite.Write();
+            MaxAndMin.MxMn();
+            //ReverseNum.RevNum();
+            //NumbersInOrder.NIO();
+
             Console.ReadLine();
         }
         
