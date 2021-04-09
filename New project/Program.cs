@@ -9,15 +9,18 @@ namespace New_project
     {
         static void Main(string[] args)
         {
-            //1 read numbers from file
-            //2 write numbers to file2 
-            //3 print numbers In reverse number
-            // 20,25,0,12,3,5,1
-            //4 print max and min number
-            // max:25 , min:0
-            //5 print numbers in order
-            // 0,1,3,5,12,20,25
+            // NOTE 1:
+            // Change your program so that it ignores lines that start with "//"
+            // See example "File1_temporary.txt"
+            // Make sure to follow these rules so that you do not get conflicts.
+            // 1. Pull before making any changes to you code
+            // 2. Make changes to your code
+            // 3. Push to Github. Fot the message, use the pattern "Completed NOTE 1", for example when you push changes for NOTE 1
+            //
+            // When You complete NOTE 1, I will give you more notes to complete :)
+            // 
             FileRead.Read();
+
            FileWrite.Write();
             MaxAndMin.MxMn();
             //ReverseNum.RevNum();
