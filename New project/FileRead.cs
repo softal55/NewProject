@@ -2,24 +2,46 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using System.Linq;
 
 namespace New_project
 {
     class FileRead
     {
-        const string Filename = "File1.txt";
         public static void Read()
         {
-            Console.WriteLine("Read numbers from text file");
-            StreamReader sr = new StreamReader(Filename);
-            string data = sr.ReadLine();
-            while (data != null)
+            Console.WriteLine("Read from text file and ignore \"//\" :");
+            string filename = @"File1_temporary.txt";
+            string line;
+            string fileContent = "";
+
+            if (File.Exists(filename))
             {
-                Console.WriteLine(data);
-                data = sr.ReadLine();
+                StreamReader file = null;
+                try
+                {
+                    file = new StreamReader(filename);
+                    while ((line = file.ReadLine()) != null)
+                    {
+                        if (!line.StartsWith("//"))
+                        {
+                            Console.WriteLine(line);
+                            fileContent += line;
+                        }
+                    }
+                }
+                finally
+                {
+                    if (file != null)
+                        file.Close();
+                }
+
+
+
+
             }
-            sr.Close();
         }
-       
     }
+
 }
+
