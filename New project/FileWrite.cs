@@ -11,7 +11,7 @@ namespace New_project
         const string filename = "File2.txt";
          
         // Note 6:
-        // Change the Write merhod so that it takes the filename as a parameter of type string.
+        // Change the Write method so that it takes the filename as a parameter of type string.
         public static void Write()
          {
             
