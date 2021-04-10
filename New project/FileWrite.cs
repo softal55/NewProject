@@ -6,8 +6,13 @@ namespace New_project
 {
     class FileWrite
     {
+        // Note 5:
+        // Move this line to the main program
         const string filename = "File2.txt";
-         public static void Write()
+         
+        // Note 6:
+        // Change the Write merhod so that it takes the filename as a parameter of type string.
+        public static void Write()
          {
             
             StreamWriter sw = new StreamWriter(filename);
