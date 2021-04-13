@@ -18,14 +18,19 @@ namespace New_project
             // Change the return type of the "Read" method to an array.
             // So the method call becomes 
             // var [] inputValues  = FileRead.Read();
+           
+           var [] inputValues = FileRead.Read();
+           
             
-            FileRead.Read();
-
+            string filename = @"File1_temporary.txt";
             // NOTE 2: change the Write method as follows
             // FileWrite.Write(inputValues);
-            FileWrite.Write();
+           FileWrite.Write(inputValues);
+          //  const string filename = "File2.txt";
+
             MaxAndMin.MxMn();
-            //ReverseNum.RevNum();
+            ReverseNum reverseNum = new ReverseNum();
+            reverseNum.RevNum();
             //NumbersInOrder.NIO();
 
             Console.ReadLine();

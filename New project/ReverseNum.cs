@@ -6,9 +6,9 @@ namespace New_project
 {
     class ReverseNum
     {
-        public static void RevNum()
+        public   void  RevNum()
         {
-
+            
         }
     }
 }

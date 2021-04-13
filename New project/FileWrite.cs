@@ -8,11 +8,10 @@ namespace New_project
     {
         // Note 5:
         // Move this line to the main program
-        const string filename = "File2.txt";
-         
+        
         // Note 6:
         // Change the Write method so that it takes the filename as a parameter of type string.
-        public static void Write()
+        public static void Write(string filename)
          {
             
             StreamWriter sw = new StreamWriter(filename);
