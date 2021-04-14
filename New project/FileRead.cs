@@ -74,7 +74,7 @@ namespace New_project
                         {
                             Console.WriteLine(line);
                             fileContent += line;
-                            return inputValues;
+                            
                         }
                        
                       
