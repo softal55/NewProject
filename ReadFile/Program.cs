@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Reflection.Emit;
 
 namespace ReadFile
 {
@@ -16,19 +18,31 @@ namespace ReadFile
             // 
             // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time
             // 
-            string fileContents = File.ReadAllText(@"File1_temporary.txt");
-            string line = '\r'.ToString() + '\n'.ToString();
-            fileContents = fileContents.Replace(line, '\n'.ToString());
-            string[] array = fileContents.Split(new char[] { '\n' });
-            int[] intArray = new int[array.Length];
-            for (int i = 0; i < intArray.Length; i++)
-            {
-                int.TryParse(array[i], out intArray[i]);
-            }
-            foreach (int i in intArray)
-            Console.WriteLine(i);
+           
+            int counter = 0;
+            string line;
+            
 
-           Console.Read();
+
+             
+            StreamReader file = new StreamReader(@"File1_temporary.txt");
+
+            
+            int[] inputValues = new int[7];
+            
+
+            while ((line = file.ReadLine()) != null)
+            {
+                Console.WriteLine(line);
+                counter++;
+            }
+
+            file.Close();
+            Console.WriteLine($"File has {counter} lines" , inputValues);
+            Console.ReadLine();
+
+            
+
 
         }
     }

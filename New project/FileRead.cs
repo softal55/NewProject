@@ -46,8 +46,7 @@ namespace New_project
             //string line = '\r'.ToString() + '\n'.ToString();
             string line;
 
-           string fileContent = "";
-          
+            
 
 
 
