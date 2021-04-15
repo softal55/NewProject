@@ -34,7 +34,9 @@ namespace ReadFile
             while ((line = file.ReadLine()) != null)
             {
                 Console.WriteLine(line);
+                inputValues[counter] = int.Parse(line);
                 counter++;
+                
             }
 
             file.Close();
