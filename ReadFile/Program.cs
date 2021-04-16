@@ -36,8 +36,9 @@ namespace ReadFile
             var number = file.ReadLine(); // read the first line in the file
             while (number != null) 
             {
-                //Console.WriteLine(line);
+                
                 inputValues[counter] = int.Parse(number);
+                Console.WriteLine(number);
                 counter++; 
                 number = file.ReadLine(); // read the next line in the file
             }
@@ -46,6 +47,8 @@ namespace ReadFile
             // We do not need the next 2 lines.
             //Console.WriteLine($"File has {counter} lines" , inputValues);
             //Console.ReadLine();
+
+            
 
             
             // At this point. we have an array that holds 7 numbers.
