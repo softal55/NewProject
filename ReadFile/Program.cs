@@ -47,11 +47,13 @@ namespace ReadFile
             // Now, let us check how many variable we have in the array.
             // The array has a method called "Count" that we can use.
             int numberOfItemsInArray = inputValues.Count();
-
+            
             // Now we loop through each element in the screen and display it.
-            Console.WriteLine("The array has the following elements");
-            for (int i = 1; i < numberOfItemsInArray; i++ )  
+           Console.WriteLine("The array has the following elements");
+            //the mistake in i = 1 , it's i = 0
+            for (int i = 0; i < numberOfItemsInArray; i++)  
             {
+                
                 Console.WriteLine(inputValues[i]);
             }
         }
