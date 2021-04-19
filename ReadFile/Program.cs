@@ -10,59 +10,50 @@ namespace ReadFile
     {
         static void Main(string[] args)
         {
-            // Note 1: Change your code to use ReadLine, similar to this link.
-            // In you case, you read line by line, then:
-            // 1. Write the line you read to the screen.
-            // 2. Add the line to the array.
-            // push back when done.
-            // 
-            // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-read-a-text-file-one-line-at-a-time
-            // 
-           
+ 
+            // Declare a counter that will be used to count the number of integers we read.
             int counter = 0;
-            //string line;
-            
 
-
-             
-            StreamReader file = new StreamReader(@"File1_temporary.txt");
-
-            
+            // Declare an array that can hold a maximum of 7 integers
             int[] inputValues = new int[7];
 
-            // I am replacing this line with other lines to make it easier to see
-            // the execution logic.
-            // while ((line = file.ReadLine()) != null)
-            var number = file.ReadLine();// read the first line in the file
+            // Open the file for reading, using a StreamReader.
+            StreamReader file = new StreamReader(@"File1_temporary.txt");
+
+            // Read the first line in the file
+            var number = file.ReadLine();
           
+            // Check if the number is null.
             while (number != null) 
             {
-                
+                // Now, we know that the number is not null. 
+                // So, we will add this number to the array.
                 inputValues[counter] = int.Parse(number);
+
+                // Now, we increase the counter by 1, because we read one number
+                counter++;
                 
-                counter++; 
-                number = file.ReadLine(); // read the next line in the file
+                // The above line is the same as 
+                // copunter = counter + 1; 
+
+                // Now, let us read the next line from the "Stream" called file and put it in the variable called "number"
+                number = file.ReadLine();
             }
 
-            // file.Close();
-            // We do not need the next 2 lines.
-            //Console.WriteLine($"File has {counter} lines" , inputValues);
-            //Console.ReadLine();
-
-
-
-
-            // At this point. we have an array that holds 7 numbers.
-            // Note 1: Write code that writes the numbers in the array to the screen
-            // push back wghen done!
-           //When i use "F11" the compiler see just the frist while loop
-           //Why?
-            while ((number = Console.ReadLine()) != null)
-            {
-                if (number != null)
-               Console.WriteLine(number);
-            }     
+            // When all the number are read, we skip the while loop to get here.
+            // We have no more number to read, so we close the stream called "file"
             file.Close();
+
+            // Now, let us check how many variable we have in the array.
+            // The array has a method called "Count" that we can use.
+            int numberOfItemsInArray = inputValues.Count();
+
+            // Now we loop through each element in the screen and display it.
+            Console.WriteLine("The array has the following elements");
+            for (int i = 1; i < numberOfItemsInArray; i++ )  
+            {
+                Console.WriteLine(inputValues[i]);
+            }
         }
     }
 }
