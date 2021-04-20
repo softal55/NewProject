@@ -11,8 +11,7 @@ namespace ReadFile
             // Open the file for reading, using a StreamReader.
             StreamReader file = new StreamReader(@"File1_temporary.txt");
 
-            // replace lines 18 to 27 with a new method called ReadData in file called FileHelper.cs
-            // the method declaration is like this:
+            // replace lines 17 to 26 with a new method called ReadData in file called FileHelper.cs
             // You need parameters for the the method.
 
             int counter = 0;
@@ -26,8 +25,7 @@ namespace ReadFile
             }
             file.Close();
 
-            // replace lines 33 to 38 with a new method called DisplayData in file called ArrayHelper.cs
-            // the method declaration is like this:
+            // Replace lines 31 to 36 with a new method called DisplayData in a file called ArrayHelper.cs
             // You need parameters for the the method.
 
             int numberOfItemsInArray = inputValues.Count();
