@@ -57,14 +57,7 @@ namespace New_project
                 
                 try
                 {
-                    var Values = new List<int>();
-                    file = new StreamReader(filename);
-                    while (!file.EndOfStream)
-                    {
-                        if (int.TryParse(file.ReadLine(), out int inputValue) && inputValue != 0)
-                            Values.Add(inputValue);
-                        return inputValues;
-                    }
+                    
                     while ((line = file.ReadLine()) != null)
                     {
                         

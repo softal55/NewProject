@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ReadingFile;
+using System;
 using System.IO;
 using System.Linq;
 
@@ -8,32 +9,21 @@ namespace ReadFile
     {
         static void Main(string[] args)
         {
-            // Open the file for reading, using a StreamReader.
-            StreamReader file = new StreamReader(@"File1_temporary.txt");
+            // I have change this line
+            //StreamReader file = new StreamReader(@"File1_temporary.txt");
+            // With this line:
+            string filename = @"File1_temporary.txt";
+            // take look in FileHelper.cs
 
-            // replace lines 17 to 26 with a new method called ReadData in file called FileHelper.cs
-            // You need parameters for the the method.
+            // Call the file FileHelper.cs that content the method ReadData
+            FileHelper.ReadData(filename);
 
-            int counter = 0;
-            int[] inputValues = new int[7];
-            var number = file.ReadLine();
-            while (number != null)
-            {
-                inputValues[counter] = int.Parse(number);
-                counter++;
-                number = file.ReadLine();
-            }
-            file.Close();
 
-            // Replace lines 31 to 36 with a new method called DisplayData in a file called ArrayHelper.cs
-            // You need parameters for the the method.
-
-            int numberOfItemsInArray = inputValues.Count();
-            Console.WriteLine("The array has the following elements");
-            for (int i = 0; i < numberOfItemsInArray; i++)
-            {
-                Console.WriteLine(inputValues[i]);
-            }
+            //I have problem here in call the method
+            //I have use string inputValues as parameter ,  take look in ArrayHelper.cs
+            // give me some hints to do it :)
+            ArrayHelper.DisplayData();
+            
         }
     }
 }
