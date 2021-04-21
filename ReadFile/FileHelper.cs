@@ -16,7 +16,8 @@ namespace ReadingFile
            // I have try to return it in the while loop , the problem stay
             if (File.Exists(filename))
             {
-                StreamReader file = null;
+                StreamReader file = new StreamReader(filename);
+                //StreamReader file = null;
 
                 int counter = 0;
                 int[] inputValues = new int[7];
@@ -27,13 +28,14 @@ namespace ReadingFile
                     inputValues[counter] = int.Parse(number);
                     counter++;
                     number = file.ReadLine();
-                    
                 }
                 
                 file.Close();
                 return inputValues;
             }
-            
+            // If the file does not exist, we skip the "if" statement. There will be no data in the array.
+            // So, we return null.
+            return null;
         }
     }
 }

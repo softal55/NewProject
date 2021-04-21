@@ -7,7 +7,7 @@ namespace ReadingFile
 {
     class ArrayHelper
     {
-        public static void DisplayData( string inputValues)
+        public static void DisplayData( int [] inputValues)
         {
         
           int numberOfItemsInArray = inputValues.Count();
