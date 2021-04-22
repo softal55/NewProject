@@ -5,19 +5,17 @@ using System.Text;
 
 namespace ReadingFile
 {
-    class FileHelper
+    class ReadingFileNumbers
     {
         
 
         public static int[] ReadData(string filename)
         {
-           //I have return the array
-           // But there are the conflicts of not all the code return value
-           // I have try to return it in the while loop , the problem stay
+            Console.WriteLine("The program will the file now. Hit <Enter> to continue");
+            Console.ReadKey();
             if (File.Exists(filename))
             {
                 StreamReader file = new StreamReader(filename);
-                //StreamReader file = null;
 
                 int counter = 0;
                 int[] inputValues = new int[7];
@@ -31,6 +29,12 @@ namespace ReadingFile
                 }
                 
                 file.Close();
+                Console.WriteLine("The program completed reading all the numbers");
+                Console.WriteLine("and stored them in an array.");
+                Console.WriteLine("Hit <Enter> to continue");
+
+                Console.ReadKey();
+
                 return inputValues;
             }
             // If the file does not exist, we skip the "if" statement. There will be no data in the array.

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ReadingFile
 {
-    class ArrayHelper
+    class DisplayingArrayNumbers
     {
         public static void DisplayData( int [] inputValues)
         {
