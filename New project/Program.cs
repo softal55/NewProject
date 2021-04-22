@@ -26,7 +26,7 @@ namespace New_project
             // NOTE 2: change the Write method as follows
             // FileWrite.Write(inputValues);
            FileWrite.Write(inputValues);
-          //  const string filename = "File2.txt";
+            const string filename = @"File2.txt";
 
             MaxAndMin.MxMn();
             ReverseNum reverseNum = new ReverseNum();
