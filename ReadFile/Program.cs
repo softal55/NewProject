@@ -20,9 +20,9 @@ namespace ReadFile
             // Here is your next homework:
             // Add a class called "AddingNumbers" to the project. The class has one method called "Add"
             // The "Add" method takes the array, which is "myData", adds all the numbers in the array and returns the sum.
-            // int sumOfNumbers = AddingNumbers.Sum (myData) 
-
-            // Console.WriteLine ("Sum = ", sumOfNumbers);
+            int sumOfNumbers = AddingNumbers.Sum(myData);
+           
+             Console.WriteLine ("Sum = ", sumOfNumbers);
         }
     }
 }
