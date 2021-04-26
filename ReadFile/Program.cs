@@ -40,7 +40,8 @@ namespace ReadFile
             // this method return an array of integers which are y and z.
             int[] smallArray = AddingNumbers.ConvertToArray(y, z);
 
-
+            // Use a while loop to display the numbers in the array smallArray
+            // It should print 5 and 22
 
         }
     }
