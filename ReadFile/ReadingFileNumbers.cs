@@ -29,9 +29,9 @@ namespace ReadingFile
                 }
                 
                 file.Close();
-                Console.WriteLine("The program completed reading all the numbers");
-                Console.WriteLine("and stored them in an array.");
-                Console.WriteLine("Hit <Enter> to continue");
+                //Console.WriteLine("The program completed reading all the numbers");
+                //Console.WriteLine("and stored them in an array.");
+                //Console.WriteLine("Hit <Enter> to continue");
 
                 Console.ReadKey();
 
