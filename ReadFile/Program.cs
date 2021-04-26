@@ -22,13 +22,26 @@ namespace ReadFile
             // The "Add" method takes the array, which is "myData", adds all the numbers in the array and returns the sum.
             int sumOfNumbers = AddingNumbers.Add(myData);
 
-            int x = 6;
-            int addOne = AddingNumbers.AddOne(x);
-            Console.WriteLine("X = {0}", x);
-
-           
-             Console.WriteLine ("Sum = {0}", sumOfNumbers);
+            Console.WriteLine ("Sum = {0}", sumOfNumbers);
             //Console.ReadKey();
+            int x = 6;
+            // This method return x+ 1 
+            int addOne = AddingNumbers.AddOne(x);
+            Console.WriteLine("X = {0}", x); // 7
+
+            int a = 6;
+            int b = 7;
+            // This method return the sum of a+b
+            int add2Numbers = AddingNumbers.Add2Numbers(a,b);
+            Console.WriteLine("X = {0}", x); //  13
+
+            int y = 5;
+            int z = 22;
+            // this method return an array of integers which are y and z.
+            int[] sumOfNumbers = AddingNumbers.Add(y, z);
+
+
+
         }
     }
 }
