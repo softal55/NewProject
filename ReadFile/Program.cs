@@ -38,7 +38,7 @@ namespace ReadFile
             int y = 5;
             int z = 22;
             // this method return an array of integers which are y and z.
-            int[] sumOfNumbers = AddingNumbers.Add(y, z);
+            int[] smallArray = AddingNumbers.Add(y, z);
 
 
 
