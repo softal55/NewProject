@@ -6,6 +6,7 @@ namespace Variables
     {
         static void Main(string[] args)
         {
+         
             int x;
 
             x = 3;

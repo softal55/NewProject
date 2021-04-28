@@ -27,8 +27,20 @@ namespace ReadingFile
 
         public static int AddOne(int x)
         {
-           x+= 0;
-            return x+1;
+           ////x+= 0; // x = x+0;
+           // return x+1;
+
+            // 1
+            x = x + 1;
+            return x;
+
+            // 2
+            return x + 1;
+
+            // 3
+            return (x + 1);
+
+
         }
         public static int Add2Numbers(int a, int b)
         {
