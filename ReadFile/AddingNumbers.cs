@@ -35,29 +35,30 @@ namespace ReadingFile
             return x;
 
             // 2
-            return x + 1;
+           // return x + 1;
 
             // 3
-            return (x + 1);
+          //  return (x + 1);
 
 
         }
         public static int Add2Numbers(int a, int b)
         {
-            _ = a + b;
-            return a + b;
+            int c;
+            c= a + b;
+            return c;
         }
         public static int[] ConvertToArray(int y, int z)
         {
             // declare an array of integer
             int[] smallArray = new int[2];
+            smallArray[0] = y;
+            smallArray[1] = z;
             int numberOfArray = smallArray.Count();
             Console.WriteLine("Task 3:");
             for (int i = 0; i < numberOfArray; i++)
             {
-                Console.WriteLine(y);
-                Console.WriteLine(z);
-
+                Console.WriteLine(smallArray[i]);
             }
             
             //return an array of integers
