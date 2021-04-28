@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "New project", "New project\New project.csproj", "{FF9A29D3-6B67-48E8-BF81-B850FC185F12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReadingFile", "ReadFile\ReadingFile.csproj", "{32EFB05A-7C4D-4F6A-B1CA-113F6D2961B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadingFile", "ReadFile\ReadingFile.csproj", "{32EFB05A-7C4D-4F6A-B1CA-113F6D2961B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "Variables\Variables.csproj", "{709488E0-83C8-4F12-AD29-E24370EC5B8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{32EFB05A-7C4D-4F6A-B1CA-113F6D2961B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32EFB05A-7C4D-4F6A-B1CA-113F6D2961B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32EFB05A-7C4D-4F6A-B1CA-113F6D2961B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709488E0-83C8-4F12-AD29-E24370EC5B8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709488E0-83C8-4F12-AD29-E24370EC5B8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709488E0-83C8-4F12-AD29-E24370EC5B8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709488E0-83C8-4F12-AD29-E24370EC5B8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
