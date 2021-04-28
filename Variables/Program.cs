@@ -17,6 +17,7 @@ namespace Variables
             x = 5;
 
             Console.WriteLine($"x = {x}");
+
             Console.WriteLine($"y = {y}");
         }
     }
