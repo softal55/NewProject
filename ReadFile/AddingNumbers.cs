@@ -57,12 +57,7 @@ namespace ReadingFile
             // This method should not display the numbers.
             // Move these lines (60-65) to the main program.
             
-            int numberOfArray = smallArray.Count();
-            Console.WriteLine("Task 3:");
-            for (int i = 0; i < numberOfArray; i++)
-            {
-                Console.WriteLine(smallArray[i]);
-            }
+            
             
             //return an array of integers
             return smallArray;
