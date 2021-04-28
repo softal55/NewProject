@@ -45,12 +45,16 @@ namespace ReadFile
             // Task 3
             int y = 5;
             int z = 22;
-            // this method return an array of integers which are y and z.
-            // the compiler print 5 and 22 twice
+            
             Console.WriteLine("-------------------------------------------------");
             int[] smallArray = AddingNumbers.ConvertToArray(y, z);
-  
-
+             
+            int numberOfArray = smallArray.Count();
+            Console.WriteLine("Task 3:");
+            for (int i = 0; i < numberOfArray; i++)
+            {
+                Console.WriteLine(smallArray[i]);
+            }
             // Use a while loop to display the numbers in the array smallArray
             // It should print 5 and 22
 
