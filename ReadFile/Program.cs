@@ -20,7 +20,8 @@ namespace ReadFile
             // Here is your next homework:
             // Add a class called "AddingNumbers" to the project. The class has one method called "Add"
             // The "Add" method takes the array, which is "myData", adds all the numbers in the array and returns the sum.
-            int sumOfNumbers = AddingNumbers.Add(myData);
+            AddingNumbers addingNumbers = new AddingNumbers();
+            int sumOfNumbers = addingNumbers.Add(myData);
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine ("Sum = {0}", sumOfNumbers);
             //Console.ReadKey();
@@ -30,7 +31,7 @@ namespace ReadFile
             // This method return x+ 1 
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine("Task 1:");
-            int addOne = AddingNumbers.AddOne(x);
+            int addOne = addingNumbers.AddOne(x);
             Console.WriteLine("X = {0}", addOne); // 7
 
             // Task 2
@@ -39,7 +40,7 @@ namespace ReadFile
             // This method return the sum of a+b
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine("Task 2:");
-            int add2Numbers = AddingNumbers.Add2Numbers( a, b);
+            int add2Numbers = addingNumbers.Add2Numbers( a, b);
             Console.WriteLine("X = {0}", add2Numbers); //  13
 
             // Task 3
@@ -47,7 +48,7 @@ namespace ReadFile
             int z = 22;
             
             Console.WriteLine("-------------------------------------------------");
-            int[] smallArray = AddingNumbers.ConvertToArray(y, z);
+            int[] smallArray = addingNumbers.ConvertToArray(y, z);
              
             int numberOfArray = smallArray.Count();
             Console.WriteLine("Task 3:");
@@ -61,7 +62,8 @@ namespace ReadFile
             // This method returns the largest  number in the array 'myData'
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine("Task 4");
-            int maxNumberInArray = AddingNumbers.MaxNumber(myData);
+           
+            int maxNumberInArray = addingNumbers.MaxNumber(myData);
             Console.WriteLine("Max = {0}", maxNumberInArray);
 
             // Task 5:
@@ -69,7 +71,7 @@ namespace ReadFile
             // This method returns the smallest  number in the array 'myData'
             Console.WriteLine("-------------------------------------------------");
             Console.WriteLine("Task 5:");
-            int minNumberInArray = AddingNumbers.MinNumber(myData);
+            int minNumberInArray = addingNumbers.MinNumber(myData);
             Console.WriteLine("Min = {0}", minNumberInArray);
         }
     }
