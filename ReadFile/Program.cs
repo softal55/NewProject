@@ -58,11 +58,13 @@ namespace ReadFile
 
             // Task 4:
             // Implement the following method
-            // int[] maxNumberInArray = AddingNumbers.MaxNumber(myData);
+            // This method returns the smallest number in the array 'myData'
+            // int maxNumberInArray = AddingNumbers.MaxNumber(myData);
 
             // Task 5:
             // Implement the following method
-            // int[] minNumberInArray = AddingNumbers.MinNumber(myData);
+            // This method returns the largest number in the array 'myData'
+            // int minNumberInArray = AddingNumbers.MinNumber(myData);
 
         }
     }
