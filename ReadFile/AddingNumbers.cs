@@ -16,31 +16,12 @@ namespace ReadingFile
             
            int sum = myData.Sum();
             return sum;
-            //int sumOfNumber = myData.Count();
-            //for (int i = 0; i < sumOfNumber; i++)
-            //{
-            //    sum += myData[i];
-                
-            //}
-            //return myData;
         }
 
         public static int AddOne(int x)
         {
-           ////x+= 0; // x = x+0;
-           // return x+1;
-
-            // 1
             x = x + 1;
             return x;
-
-            // 2
-           // return x + 1;
-
-            // 3
-          //  return (x + 1);
-
-
         }
         public static int Add2Numbers(int a, int b)
         {
@@ -54,12 +35,6 @@ namespace ReadingFile
             int[] smallArray = new int[2];
             smallArray[0] = y;
             smallArray[1] = z;
-            // This method should not display the numbers.
-            // Move these lines (60-65) to the main program.
-            
-            
-            
-            //return an array of integers
             return smallArray;
         }
     }

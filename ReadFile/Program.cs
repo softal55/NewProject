@@ -55,8 +55,14 @@ namespace ReadFile
             {
                 Console.WriteLine(smallArray[i]);
             }
-            // Use a while loop to display the numbers in the array smallArray
-            // It should print 5 and 22
+
+            // Task 4:
+            // Implement the following method
+            // int[] maxNumberInArray = AddingNumbers.MaxNumber(myData);
+
+            // Task 5:
+            // Implement the following method
+            // int[] minNumberInArray = AddingNumbers.MinNumber(myData);
 
         }
     }
