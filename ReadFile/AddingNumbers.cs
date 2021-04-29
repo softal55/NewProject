@@ -37,5 +37,17 @@ namespace ReadingFile
             smallArray[1] = z;
             return smallArray;
         }
+
+         public static int MaxNumber(int[] myData)
+         {
+            int max = myData.Max();
+            return max;
+        }
+
+        public static int MinNumber(int[] myData)
+        {
+            int min = myData.Min();
+            return min;
+        }
     }
 }

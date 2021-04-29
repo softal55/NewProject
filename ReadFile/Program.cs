@@ -59,13 +59,18 @@ namespace ReadFile
             // Task 4:
             // Implement the following method
             // This method returns the largest  number in the array 'myData'
-            // int maxNumberInArray = AddingNumbers.MaxNumber(myData);
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("Task 4");
+            int maxNumberInArray = AddingNumbers.MaxNumber(myData);
+            Console.WriteLine("Max = {0}", maxNumberInArray);
 
             // Task 5:
             // Implement the following method
             // This method returns the smallest  number in the array 'myData'
-            // int minNumberInArray = AddingNumbers.MinNumber(myData);
-
+            Console.WriteLine("-------------------------------------------------");
+            Console.WriteLine("Task 5:");
+            int minNumberInArray = AddingNumbers.MinNumber(myData);
+            Console.WriteLine("Min = {0}", minNumberInArray);
         }
     }
 }
