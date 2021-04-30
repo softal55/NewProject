@@ -25,7 +25,6 @@ namespace Colors
             // if the user enters another value, diplay 
             // Your entered an invalid number, please try again.
             // 
-            Console.WriteLine("Hello World!");
         }
     }
 }
