@@ -24,7 +24,36 @@ namespace Colors
             // 7 for BLACK
             // if the user enters another value, diplay 
             // Your entered an invalid number, please try again.
-            // 
+            Console.WriteLine("Please enter number :");
+            int FavoriteColor = int.Parse(Console.ReadLine());
+            switch(FavoriteColor)
+            {
+                case 1:
+                    Console.WriteLine("Your favorite color is : Red");
+                    break;
+                case 2:
+                    Console.WriteLine("Your favorite color is : Blue");
+                    break;
+                case 3:
+                    Console.WriteLine("Your Favorite color is : Green");
+                    break;
+                case 4:
+                    Console.WriteLine("Your favorite color is : Yellow");
+                    break;
+                case 5:
+                    Console.WriteLine("Your favorite color is : Brown");
+                    break;
+                case 6:
+                    Console.WriteLine("Your favorite color is : White");
+                    break;
+                case 7:
+                    Console.WriteLine("Your favorite color is : Black");
+                    break;
+                default:
+                    Console.WriteLine(" Your entered an invalid number, please try again.");
+                    break;
+
+            }
         }
     }
 }
