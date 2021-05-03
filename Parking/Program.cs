@@ -41,7 +41,7 @@ namespace Parking
             // the method takes a list cars and returns an integer indicating the number
             // of cars that the method printed.
             // Create a new file that holds the class which contains the method that displays the cars
-            // The method display the cars like this:
+            // The method displays the cars like this:
             // Car 1:
             //     Id = 4;
             //      Color = "Green";
