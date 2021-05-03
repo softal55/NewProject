@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "New project", "New project\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReadingFile", "ReadFile\ReadingFile.csproj", "{32EFB05A-7C4D-4F6A-B1CA-113F6D2961B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variables", "Variables\Variables.csproj", "{709488E0-83C8-4F12-AD29-E24370EC5B8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Variables", "Variables\Variables.csproj", "{709488E0-83C8-4F12-AD29-E24370EC5B8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Colors", "Colors\Colors.csproj", "{5D881185-E866-41F1-8567-29743145730A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Colors", "Colors\Colors.csproj", "{5D881185-E866-41F1-8567-29743145730A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parking", "Parking\Parking.csproj", "{785EC628-5AE1-44A3-9835-4D4CAEA2AAE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5D881185-E866-41F1-8567-29743145730A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D881185-E866-41F1-8567-29743145730A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D881185-E866-41F1-8567-29743145730A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{785EC628-5AE1-44A3-9835-4D4CAEA2AAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{785EC628-5AE1-44A3-9835-4D4CAEA2AAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{785EC628-5AE1-44A3-9835-4D4CAEA2AAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{785EC628-5AE1-44A3-9835-4D4CAEA2AAE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
