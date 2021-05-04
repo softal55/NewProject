@@ -37,23 +37,8 @@ namespace Parking
             cars.Add(car3);
             cars.Add(car4);
 
-            PrintList.print();
-            // Implement a method to print the list of cars
-            // the method takes a list cars and returns an integer indicating the number
-            // of cars that the method printed.
-            // Create a new file that holds the class which contains the method that displays the cars
-            // The method displays the cars like this:
-            // Car 1:
-            //     Id = 4;
-            //      Color = "Green";
-            //      Model = "Hyundai";
-            //      IsSportsCar = false;
-            // Car 2:
-            // ...
-            
-            
-
-
+            // Since we want to print the list of cars, we need to pass that list to the method as follows.
+            PrintList.Print(cars);
 
         }
     }
