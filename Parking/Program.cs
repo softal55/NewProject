@@ -6,8 +6,9 @@ namespace Parking
     {
         static void Main(string[] args)
         {
-            Car car1 = new Car();
            
+            Car car1 = new Car();
+            
             car1.Id = 1;
             car1.Color = "Red";
             car1.Model = "Toyota";
@@ -30,13 +31,13 @@ namespace Parking
             car4.Color = "Green";
             car4.Model = "Hyundai";
             car4.IsSportsCar = false;
-
             List<Car> cars = new List<Car>();
             cars.Add(car1);
             cars.Add(car2);
             cars.Add(car3);
             cars.Add(car4);
 
+            PrintList.print();
             // Implement a method to print the list of cars
             // the method takes a list cars and returns an integer indicating the number
             // of cars that the method printed.
