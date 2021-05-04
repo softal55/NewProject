@@ -11,13 +11,18 @@ namespace Parking
             // There is a C# contruct called foreach
             foreach (var car in cars)
             {
-                // Print the property Id.
-                Console.WriteLine("Car 1 Id {0}", car.Id);
-
-                // now finish printing the other properties.
-
+                Console.WriteLine("The Car Id : " + car.Id + ", Color : " + car.Color + ", Model : " + car.Model);
+                
+                if (car.IsSportsCar == true)
+                {
+                    Console.WriteLine("The car is a \"sports car\" ");
+                }
+                if (car.IsSportsCar == false)
+                {
+                    Console.WriteLine("The car is not a \"sports car\" ");
+                }
             }
-            
+          // if something is not good tell me , to review it
         }
     }
 }
