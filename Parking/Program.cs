@@ -10,6 +10,8 @@ namespace Parking
             // https://www.youtube.com/watch?v=Reeefq-Nxkk
             // 
 
+            // Task objective: learn how to use constructors in c#
+            // 
             // Replace the lines to create 'car1' with a constructors.
             Car car1 = new Car();
             car1.Id = 1;
