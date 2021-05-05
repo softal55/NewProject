@@ -11,5 +11,12 @@ namespace Parking
         public string Model;
         public bool IsSportsCar;
        
+        public Car(int id, string color, string model , bool isSportsCar)
+        {
+            Id = id;
+            Color = color;
+            Model = model;
+            IsSportsCar = isSportsCar;
+        }
     }
 }
