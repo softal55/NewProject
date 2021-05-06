@@ -7,15 +7,20 @@ namespace Parking
         static void Main(string[] args)
         {
             
-            Car car1 = new Car(1,"Red", "Toyota", true);
-          
-            Car car2 = new Car(2, "Blue", "Honda", false);
-            
-            Car car3 = new Car(3 ,"Red", "Honda", true);
-            
-            Car car4 = new Car(4, "Green", "Hyundai", false);
-            
+            Car car1 = new Car(1);
+            car1.Color = "Red";
+            car1.Model = "Toyota";
+            car1.IsSportsCar = true;
 
+            Car car2 = new Car(2,"Honda");
+            car2.Color = "Blue";
+            car2.IsSportsCar = false;
+
+            Car car3 = new Car(3 ,"Red", true);
+            car3.Model = "Honda";
+
+            Car car4 = new Car(4, "Green", "Hyundai", false);
+           
             List<Car> cars = new List<Car>();
             cars.Add(car1);
             cars.Add(car2);

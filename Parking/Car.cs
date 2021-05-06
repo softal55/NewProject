@@ -12,14 +12,28 @@ namespace Parking
         public bool IsSportsCar;
 
         // Note that this constructor take 4 parameter.
-        public Car(int id, string color, string model , bool isSportsCar)
-        {
+       public Car(int id, string color, string model , bool isSportsCar)
+       { 
             Id = id;
-            Color = color;
+           Color = color;
+           Model = model;
+           IsSportsCar = isSportsCar;
+       }
+       public Car(int id)
+       {
+            Id = id;
+       }
+       public Car(int id, string model)
+       {
+            Id = id;
             Model = model;
-            IsSportsCar = isSportsCar;
+       }
+       public Car(int id, string color, bool isSportsCar)
+       {
+            Id = id;
+             Color = color;
+             IsSportsCar = isSportsCar;
         }
-
         // In C#, a class can have more than 1 constructor
         // Add 3 more contructors to this class
         // Constructor 1. A constructor that takes 1 paramater (Id)
