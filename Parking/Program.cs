@@ -29,6 +29,12 @@ namespace Parking
 
             PrintList.Print(cars);
 
+            // Add another method called PrintCarsByColor to the PrintList class
+            // For example, to print red cars, the method is called like this:
+            // PrintList.PrintCarsByColor("Red");
+            // If the list has no "Red" cars, it prints:
+            // The list has no red colors
+
         }
     }
 }
