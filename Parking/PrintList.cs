@@ -6,13 +6,15 @@ namespace Parking
 {
     class PrintList
     {
+        
+
         public static void Print(List<Car> cars)
         {
-            // There is a C# contruct called foreach
+           
             foreach (var car in cars)
             {
                 Console.WriteLine("The Car Id : " + car.Id + ", Color : " + car.Color + ", Model : " + car.Model);
-                
+
                 if (car.IsSportsCar == true)
                 {
                     Console.WriteLine("The car is a \"sports car\" ");
@@ -22,9 +24,29 @@ namespace Parking
                     Console.WriteLine("The car is not a \"sports car\" ");
                 }
             }
-          // if something is not good tell me , to review it
-          // This looks good :)
-
         }
+        public static void  PrintCarsByColor( List<Car>cars)
+        {
+            Console.WriteLine("Print Cars By Color:");
+            foreach (var car in cars)
+            {
+                if (car.Color == "Red")
+                {
+                    Console.WriteLine("The Car Id : " + car.Id + ", Color : " + car.Color + ", Model : " + car.Model);
+                }
+                if (car.Color != "Red")
+                {
+                    Console.WriteLine(" The list has no red colors");
+                }
+            }
+        }
+        
     }
 }
+
+
+
+
+    
+
+
