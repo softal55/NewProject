@@ -28,7 +28,7 @@ namespace Parking
             cars.Add(car4);
 
             PrintList.Print(cars);
-            PrintList.PrintCarsByColor(cars);
+            PrintList.PrintCarsByColor("Red", cars);
             
         }
     }
