@@ -17,6 +17,7 @@ namespace ReadingFile
            int sum = myData.Sum();
             return sum;
         }
+        
 
         public  int AddOne(int x)
         {
