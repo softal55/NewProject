@@ -11,6 +11,7 @@ namespace StackData
         public static void Display(Stack<string> mystack)
         {
             mystack.Pop();
+            
         }
     }
 }

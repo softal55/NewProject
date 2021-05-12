@@ -9,12 +9,14 @@ namespace StackData
     {
         static void Main(string[] args)
         {
+            // if something is not good
+            // give me some hints and i will fix it :)
             string filename = @"StackDataFile.txt";
             Stack<string> mystack = new();
             ReadingFile.Read(filename, mystack);
             foreach (string line in mystack)
-            {
-                Console.WriteLine(line, 6);
+            { 
+                Console.WriteLine(line);
             }
             DisplayStack.Display(mystack);
         }
