@@ -9,21 +9,22 @@ namespace StackData
 {
     class ReadingFile
     {
-        public static string[] read(string filename ,Stack<string> mystack)
+        public static int Read(string filename ,Stack<string> mystack)
         {
             if (File.Exists(filename))
             {
-                StreamReader file = new StreamReader(filename);
+                StreamReader file = new(filename);
                 string line = file.ReadLine();
                 while (line != null)
                 {
                     mystack.Push(line);
                     line = file.ReadLine();
+                
                 }
                 file.Close();
-                Console.ReadKey();   
+                
             }
-            return null;
+            return 6;
         }
     }
 }

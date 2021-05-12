@@ -10,9 +10,13 @@ namespace StackData
         static void Main(string[] args)
         {
             string filename = @"StackDataFile.txt";
-            Stack<string> mystack = new Stack<string>();
-            ReadingFile.read(filename, mystack);
-            DisplayStack.display(mystack);
+            Stack<string> mystack = new();
+            ReadingFile.Read(filename, mystack);
+            foreach (string line in mystack)
+            {
+                Console.WriteLine(line, 6);
+            }
+            DisplayStack.Display(mystack);
         }
     }
 }

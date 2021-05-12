@@ -8,15 +8,9 @@ namespace StackData
 {
     class DisplayStack
     {
-        public static void display(Stack<string> mystack)
+        public static void Display(Stack<string> mystack)
         {
-            string display = mystack.Pop();
-            Console.WriteLine(display);
-
-            foreach (string lin in mystack)
-            {
-                Console.WriteLine(lin);
-            }
+            mystack.Pop();
         }
     }
 }
