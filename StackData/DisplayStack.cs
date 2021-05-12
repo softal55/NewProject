@@ -10,6 +10,9 @@ namespace StackData
     {
         public static void display(Stack<string> mystack)
         {
+            string display = mystack.Pop();
+            Console.WriteLine(display);
+
             foreach (string lin in mystack)
             {
                 Console.WriteLine(lin);
