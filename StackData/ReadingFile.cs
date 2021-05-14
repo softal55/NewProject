@@ -9,7 +9,7 @@ namespace StackData
 {
     class ReadingFile
     {
-        public static int Read(string filename ,Stack<string> mystack)
+        public static string Read(string filename ,Stack<string> mystack)
         {
             if (File.Exists(filename))
             {
@@ -22,9 +22,9 @@ namespace StackData
                 
                 }
                 file.Close();
-                
+                return line;
             }
-           return 6;
+           return null;
         }
     }
 }
