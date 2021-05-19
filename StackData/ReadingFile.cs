@@ -24,7 +24,7 @@ namespace StackData
                 file.Close();
                 return line;
             }
-           return null;
+            return null;
         }
     }
 }

@@ -16,6 +16,7 @@ namespace ReadingFile
           {
                 Console.WriteLine(inputValues[i]);
           }
+            
         }
     }
 }

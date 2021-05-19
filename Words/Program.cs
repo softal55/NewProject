@@ -15,13 +15,13 @@ namespace Words
             // Task 2
             // Add a method called ReadFile to the class Word.
             // The method takes a string parameter and returns a list of strings.
-            // List<string> wordsInFile = Word.ReadFile(filename);
+            List<string> wordsInFile = Word.ReadFile(filename);
 
             // Task 3
             // Add a method to the class Word called GetNumberOfWords.
             // The method takes a list of words and returns the number of words in the list
-            // int numberOfWords = GetWords(wordsInFile)
-
+            int numberOfWords = Word.GetNumberOfWords(wordsInFile);
+            
             Console.WriteLine("End of tasks!");
         }
     }
