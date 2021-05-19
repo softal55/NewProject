@@ -21,8 +21,11 @@ namespace Words
             // Add a method to the class Word called GetNumberOfWords.
             // The method takes a list of words and returns the number of words in the list
             int numberOfWords = Word.GetNumberOfWords(wordsInFile);
-            
-            Console.WriteLine("End of tasks!");
+            for (int i = 0; i < numberOfWords; i++)
+            {
+              Console.WriteLine(wordsInFile[i]);
+            }
+                Console.WriteLine("End of tasks!");
         }
     }
 }

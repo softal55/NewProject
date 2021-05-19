@@ -30,12 +30,8 @@ namespace Words
         }
         public static int GetNumberOfWords(List<string> wordsInFile)
         {
-            int numberOfWords = wordsInFile.Count();
-            for (int i = 0; i < numberOfWords; i++)
-            {
-                Console.WriteLine(wordsInFile[i]);
-            }
-            return numberOfWords;
+           int numberOfWords = wordsInFile.Count();
+            return  numberOfWords;
         }
     }
 }
