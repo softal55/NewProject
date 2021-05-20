@@ -11,7 +11,7 @@ namespace StackData
         {
             string filename = @"StackDataFile.txt";
             Stack<string> mystack = new();
-            ReadingFile.Read(filename, mystack);
+            mystack = ReadingFile.Read(filename);
             foreach (string line in mystack)
             { 
                 Console.WriteLine(line);

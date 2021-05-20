@@ -1,7 +1,1 @@
-﻿1 
-3
-5
-12
-0
-25
-20
+﻿This file has many words Your program should count them
