@@ -28,6 +28,10 @@ namespace Words
                 string line = file.ReadLine();
                 while (line != null)
                 {
+                    // You need to split the line into words.
+                    // Here is an example
+                    // https://www.codegrepper.com/code-examples/csharp/c%23+string+split+split+options+and+store+in+list
+                    // 
                     wordsInFile.Add(line);
                     line = file.ReadLine();
                 }
