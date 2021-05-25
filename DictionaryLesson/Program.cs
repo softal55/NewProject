@@ -17,12 +17,12 @@ namespace DictionaryLesson
 
             // Task 2:
             // Add a method to the Translation class.
-            // The method takes a file name and return a list of object of type 'Translation'
+            // The method takes a file name and returns a list of object of type 'Translation'
             // Each object contains the word and the meaning from the file.
-            // List<Translation> wordsInFile = Translation.GetDictionaryData(filename);
+            //List<Translation> translatedWords = Translation.GetDictionaryData(filename);
 
-            // Diplya the number of objects in the list
-            Console.WriteLine("Hello World!");
+            // Display the number of objects in the list
+            //Console.WriteLine($"The list has {translatedWords.Count} objects");
         }
     }
 }
