@@ -21,7 +21,7 @@ namespace DictionaryLesson
             // The method takes a file name and returns a list of object of type 'Translation'
             // Each object contains the word and the meaning from the file.
             string filename = @"TranslationFile.txt";
-            List<Translation> translatedWords = Translation.GetDictionaryData(filename);
+            Dictionary<string, string> translatedWords = Translation.GetDictionaryData(filename);
 
             // Display the number of objects in the list
             Console.WriteLine($"The list has {translatedWords.Count} objects");

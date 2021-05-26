@@ -9,16 +9,13 @@ namespace DictionaryLesson
 {
     class Translation
     {
-        public string Word;
-        public string Meaning;
         
-        public static List<Translation> GetDictionaryData(string filename)
+        public static Dictionary<string, string> GetDictionaryData(string filename)
         {
             // Hint 1
             // define  a dictinary  called 'wordsInDictionary' of type <string, string>
             Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
-             
-            List<Translation> translatedWords = new();
+
             if(File.Exists(filename))
             {
                 StreamReader file = new(filename);
@@ -49,7 +46,7 @@ namespace DictionaryLesson
                 }
                 file.Close();
             }
-            return translatedWords;
+            return wordsInDictionary;
         }
     }
 }
