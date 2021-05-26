@@ -25,13 +25,13 @@ namespace Parking
                 }
             }
         }
-        public static void  PrintCarsByColor( string Color, List<Car>cars)
+        public static void  PrintCarsByColor(List<Car>cars)
         {
             Console.WriteLine("Print Cars By Color:");
 
             foreach (var car in cars)
             {
-                Color = car.Color;
+               string Color = car.Color;
                 if (Color == "Red")
                 {
                     Console.WriteLine("The Car Id : " + car.Id + ", Color : " + car.Color + ", Model : " + car.Model);

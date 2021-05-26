@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 // Watch these videos on dictiony in C#
 // https://www.youtube.com/watch?v=jOLFsT6j9Wg
@@ -19,10 +20,11 @@ namespace DictionaryLesson
             // Add a method to the Translation class.
             // The method takes a file name and returns a list of object of type 'Translation'
             // Each object contains the word and the meaning from the file.
-            //List<Translation> translatedWords = Translation.GetDictionaryData(filename);
+            string filename = @"TranslationFile.txt";
+            List<Translation> translatedWords = Translation.GetDictionaryData(filename);
 
             // Display the number of objects in the list
-            //Console.WriteLine($"The list has {translatedWords.Count} objects");
+            Console.WriteLine($"The list has {translatedWords.Count} objects");
         }
     }
 }
