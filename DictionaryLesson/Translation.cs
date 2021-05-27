@@ -35,11 +35,21 @@ namespace DictionaryLesson
                         // Now, meaningOfWord[0] is the key and meaningOfWord[1] is the value.
                         // so, add the <key, value> to the dictionary 'wordsInDictionary'
                         // declare 2 variables of type string 
-                        // string key = holds the key, which is meaningOfWord[0]
+                        //string key = holds the key, which is meaningOfWord[0]
                         // string value = holds the key, which is meaningOfWord[1]
                         // Now add the <key, value>; pair to the dictionary.
-                    }
+                        String[] meaningOfWord = line.Split(':');
 
+
+                        wordsInDictionary.Add(meaningOfWord[0], meaningOfWord[1]);
+                         string key = meaningOfWord[0];
+                         string value = meaningOfWord[1];
+                           wordsInDictionary.Add(key, value);
+                        
+                       
+                        
+                    }
+                    
 
 
                     line = file.ReadLine();
