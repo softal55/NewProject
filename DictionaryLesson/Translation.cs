@@ -26,8 +26,10 @@ namespace DictionaryLesson
                     //how do i use the object Word and Meaning here 
                     // Now you split the line at the ";"
                     String [] words = line.Split(';');
+                    
                     foreach (string item in words)
                     {
+                        
                         // Now, each item looks like this...
                         // House:Maison
                         // So, we split the item at the ':"
@@ -38,20 +40,11 @@ namespace DictionaryLesson
                         //string key = holds the key, which is meaningOfWord[0]
                         // string value = holds the key, which is meaningOfWord[1]
                         // Now add the <key, value>; pair to the dictionary.
-                        String[] meaningOfWord = line.Split(':');
-
-
-                        wordsInDictionary.Add(meaningOfWord[0], meaningOfWord[1]);
-                         string key = meaningOfWord[0];
-                         string value = meaningOfWord[1];
-                           wordsInDictionary.Add(key, value);
-                        
-                       
-                        
+                        String[] meaningOfWord = item.Split(':');
+                            string key = meaningOfWord[0];
+                            string value = meaningOfWord[1];
+                        wordsInDictionary.Add(key, value);
                     }
-                    
-
-
                     line = file.ReadLine();
                 }
                 file.Close();
