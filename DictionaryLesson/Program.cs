@@ -11,11 +11,13 @@ namespace DictionaryLesson
         static void Main(string[] args)
         {
             //
-            // Change this project to become a translator.
+            // Change this project to be used as English => French translator.
             // Feel free to make any changes you want to implement the translator.
-            // The user enters a word and the system diplays the translation.
+            //
+            // Here is how it works.
+            // The user enters an English word and the system diplays the translation.
+            //
             // Here what is looks lik.
-            // 
             // Please enter an English word: 
             // Suppose the user enters 'House'
             // The system displays the following.
