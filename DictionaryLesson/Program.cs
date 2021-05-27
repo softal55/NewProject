@@ -26,10 +26,11 @@ namespace DictionaryLesson
             // I moved this line to the 'Translation'
             // string filename = @"TranslationFile.txt"; 
             // 
-            Dictionary<string, string> translatedWords = Translation.GetDictionaryData();
+           // Dictionary<string, string> translatedWords = 
+                Translation.GetDictionaryData();
 
             // Display the number of objects in the list
-            Console.WriteLine($"The list has {translatedWords.Count} objects");
+          // Console.WriteLine($"The list has {translatedWords.Count} objects");
         }
     }
 }
