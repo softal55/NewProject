@@ -9,40 +9,25 @@ namespace DictionaryLesson
 {
     class Translation
     {
-        
-        public static Dictionary<string, string> GetDictionaryData(string filename)
+
+        public static Dictionary<string, string> GetDictionaryData()
         {
-            // Hint 1
-            // define  a dictinary  called 'wordsInDictionary' of type <string, string>
+            string filename = @"TranslationFile.txt";
             Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
 
-            if(File.Exists(filename))
+            if (File.Exists(filename))
             {
                 StreamReader file = new(filename);
                 string line = file.ReadLine();
-                
-                while(line != null)
+
+                while (line != null)
                 {
-                    //how do i use the object Word and Meaning here 
-                    // Now you split the line at the ";"
-                    String [] words = line.Split(';');
-                    
+                    String[] words = line.Split(';');
                     foreach (string item in words)
                     {
-                        
-                        // Now, each item looks like this...
-                        // House:Maison
-                        // So, we split the item at the ':"
-                        // Declare an array called 'meaningOfWord' to hold the items we just split
-                        // Now, meaningOfWord[0] is the key and meaningOfWord[1] is the value.
-                        // so, add the <key, value> to the dictionary 'wordsInDictionary'
-                        // declare 2 variables of type string 
-                        //string key = holds the key, which is meaningOfWord[0]
-                        // string value = holds the key, which is meaningOfWord[1]
-                        // Now add the <key, value>; pair to the dictionary.
                         String[] meaningOfWord = item.Split(':');
-                            string key = meaningOfWord[0];
-                            string value = meaningOfWord[1];
+                        string key = meaningOfWord[0];
+                        string value = meaningOfWord[1];
                         wordsInDictionary.Add(key, value);
                     }
                     line = file.ReadLine();

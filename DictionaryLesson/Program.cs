@@ -10,18 +10,21 @@ namespace DictionaryLesson
     {
         static void Main(string[] args)
         {
-            // Task 1:
-            // Create a class called "Translation" in a file called "Translation.cs"
-            // The class has 2 properties
-            // 1. public string Word;
-            // 2. public string Meaning;
+            //
+            // Change this project to become a translator.
+            // Feel free to make any changes you want to implement the translator.
+            // The user enters a word and the system diplays the translation.
+            // Here what is looks lik.
+            // 
+            // Please enter an English word: 
+            // Suppose the user enters 'House'
+            // The system displays the following.
+            // The French word for 'House' is 'Maison'
 
-            // Task 2:
-            // Add a method to the Translation class.
-            // The method takes a file name and returns a list of object of type 'Translation'
-            // Each object contains the word and the meaning from the file.
-            string filename = @"TranslationFile.txt";
-            Dictionary<string, string> translatedWords = Translation.GetDictionaryData(filename);
+            // I moved this line to the 'Translation'
+            // string filename = @"TranslationFile.txt"; 
+            // 
+            Dictionary<string, string> translatedWords = Translation.GetDictionaryData();
 
             // Display the number of objects in the list
             Console.WriteLine($"The list has {translatedWords.Count} objects");
