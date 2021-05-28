@@ -29,10 +29,9 @@ namespace DictionaryLesson
                     foreach (string item in words)
                     {
                         String[] meaningOfWord = item.Split(':');
-                        string key= meaningOfWord[0];
-                      
+                        string key= meaningOfWord[0];                      
                         string value = meaningOfWord[1];
-                      //  wordsInDictionary.Add(key, value);
+
                         Console.WriteLine("Please enter an English word: ");
                         key = Console.ReadLine();
                         Console.WriteLine($"The French word for '{key}' is '{value}'");
