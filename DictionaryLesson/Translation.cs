@@ -35,11 +35,16 @@ namespace DictionaryLesson
                         Console.WriteLine("Please enter an English word: ");
                         // key = Console.ReadLine();
                         //Console.WriteLine($"The French word for '{key}' is '{value}'");
+
+                        //it's correct when i declare while loop?
+                        // or i don't need to declare a while loop ?
                         while (key != value)
                         {
 
                             key = Console.ReadLine();
-
+                            
+                            // if this code is  correct 
+                            // what i should write after "." ?
                             if (!string.(key, out value))
                             {
                                 Console.WriteLine("Please enter alphabetic characters only, with 3 characters or more");
@@ -49,7 +54,7 @@ namespace DictionaryLesson
 
 
 
-
+                            
                             if (key != value)
                             {
                                 Console.WriteLine("Sorry, this word is too short. Please enter a word with 3 characters or more");
@@ -57,7 +62,7 @@ namespace DictionaryLesson
                             }
                         }     
                         
-                       // Console.WriteLine($"The French word for '{key}' is '{value}'");
+                        Console.WriteLine($"The French word for '{key}' is '{value}'");
 
                         Console.WriteLine("This word does not exist in the dictionary");
                         
