@@ -20,12 +20,14 @@ namespace DictionaryLesson
             //     1.2.
             //     If the user enters non-alphabetic characters (like 1, 2, $, %, *, and so on), the system displays:
             //     Please enter alphabetic characters only, with 3 characters or more.
-            //string userInput = StringProcessing.GetUserInput();
-
+           
+            string userInput = StringProcessing.GetValidInput();
+           
+            Console.WriteLine($"The word '{userInput}' is acceptable");
 
             // 
             // 3. If the user enters a word that does not exist in the dictionary, the program displays a message saying:
-            //    This word does not exist in the dictionary.
+            //   This word does not exist in the dictionary.
             //    Would you like to add it to the dictionary (Y or N)?
             // 
             //    3.a)
@@ -51,7 +53,7 @@ namespace DictionaryLesson
             // 
             // Feel free to make any changes to get the program to work.
 
-            Translation.GetDictionaryData();
+            //  Translation.GetDictionaryData();
 
         }
     }
