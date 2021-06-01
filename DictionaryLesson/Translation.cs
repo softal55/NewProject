@@ -9,6 +9,7 @@ namespace DictionaryLesson
 {
     class Translation
     {
+        public static string key;
 
         public static Dictionary<string, string> GetDictionaryData()
         {
@@ -94,10 +95,25 @@ namespace DictionaryLesson
             return wordsInDictionary;
         }
 
-        //public static bool VerifyWordInDictionary(string userInput)
-        //{  
-        // If 'userInput' exists in the dictionary, the program return true
-        // If 'userInput' does not exist in the dictionary, the program return false
-        //}
+
+        public static bool VerifyWordInDictionary(string userInput)
+        {
+            // If 'userInput' exists in the dictionary, the program return true
+            // If 'userInput' does not exist in the dictionary, the program return false
+            
+            Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
+            bool keyExists = wordsInDictionary.ContainsKey(userInput);
+            if (keyExists)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
+        }
+      
+        }
     }
-}
+
