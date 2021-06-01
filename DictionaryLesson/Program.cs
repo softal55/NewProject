@@ -10,8 +10,7 @@ namespace DictionaryLesson
     {
         static void Main(string[] args)
         {
-            // Complete tasl 1, then push to Github.
-            // Update the program so that:
+
             // Task 1.
             //      1.1
             //      If the user enters a word with 2 characters or less, the system displays
@@ -23,14 +22,23 @@ namespace DictionaryLesson
            
             string userInput = StringProcessing.GetValidInput();
            
-            Console.WriteLine($"The word '{userInput}' is acceptable");
+            // Console.WriteLine($"The word '{userInput}' is acceptable");
 
-            // 
-            // 3. If the user enters a word that does not exist in the dictionary, the program displays a message saying:
+
+            // Task 2.
+            // Cpmplete this method.
+            bool isWordInDictionary = Translation.VerifyWordInDictionary(userInput);
+               
+            
+
+
+            // Task 3
+            // 2. If the user enters a word that does not exist in the dictionary, the program displays a message saying:
             //   This word does not exist in the dictionary.
             //    Would you like to add it to the dictionary (Y or N)?
-            // 
-            //    3.a)
+            //    
+            
+            //    2.a)
             //    If the user enters 'Y', the system enters the message:
             //    Please enter an English word and its translation, separated by ':'
             //    For example: 'Sky:Ciel'
@@ -41,7 +49,7 @@ namespace DictionaryLesson
             //    The system continues normally with the message
             //    Please enter an English word:
             //
-            //    3.b)
+            //    2.b)
             //    If the user enters, 'N', then the word is not added to the dictionary.
             //    The system displays:
             //    You have chosen not to add the 'Ciel' to the dictionay.
