@@ -10,13 +10,19 @@ namespace DictionaryLesson
     {
         static void Main(string[] args)
         {
-            // New task
+            // Complete tasl 1, then push to Github.
             // Update the program so that:
-            // 1. If the user enters a word with 2 characters or less, the system displays
-            //    Sorry, this word is too short. Please enter a word with 3 characters or more.
+            // Task 1.
+            //      1.1
+            //      If the user enters a word with 2 characters or less, the system displays
+            //      Sorry, this word is too short. Please enter a word with 3 characters or more.
             //
-            // 2. If the user enters non-alphabetic characters (like 1, 2, $, %, *, and so on), the system displays:
-            //    Please enter alphabetic characters only, with 3 characters or more.
+            //     1.2.
+            //     If the user enters non-alphabetic characters (like 1, 2, $, %, *, and so on), the system displays:
+            //     Please enter alphabetic characters only, with 3 characters or more.
+            //string userInput = StringProcessing.GetUserInput();
+
+
             // 
             // 3. If the user enters a word that does not exist in the dictionary, the program displays a message saying:
             //    This word does not exist in the dictionary.
