@@ -9,12 +9,15 @@ namespace DictionaryLesson
 {
     class Translation
     {
-        public static string key;
+        //private static string key;
+        //public Dictionary<string, string> wordsInDictionary;
+        private string filename = @"TranslationFile.txt";
+        public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
 
         public static Dictionary<string, string> GetDictionaryData()
         {
             string filename = @"TranslationFile.txt";
-            Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
+            //Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
 
             if (File.Exists(filename))
             {
@@ -100,8 +103,12 @@ namespace DictionaryLesson
         {
             // If 'userInput' exists in the dictionary, the program return true
             // If 'userInput' does not exist in the dictionary, the program return false
-            
-            Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
+
+            // This variable 'wordsInDictionary' will always be empty, because it is declared inside the method.
+            // So, to make accessible, I have moved to the top and made it public.
+            // 
+            // 
+            //Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
             bool keyExists = wordsInDictionary.ContainsKey(userInput);
             if (keyExists)
             {
@@ -111,9 +118,7 @@ namespace DictionaryLesson
             {
                 return false;
             }
-            
-        }
-      
         }
     }
+}
 

@@ -28,38 +28,42 @@ namespace DictionaryLesson
             // Task 2.
             // Cpmplete this method.
             bool isWordInDictionary = Translation.VerifyWordInDictionary(userInput);
-               
+
+            // Complete the following method.
+            // The method adds the word to dictionary if it does not exist.
             
-
-
             // Task 3
-            // 2. If the user enters a word that does not exist in the dictionary, the program displays a message saying:
+            // Translation.AddWordToDictionary(userInput, isWordInDictionary);
+            // Here is  the description for this method.
+            //   3.a)
+            //   If the word that does not exist in the dictionary, the program displays a message saying:
             //   This word does not exist in the dictionary.
+            //   (Assume the user entered 'Sky')
             //    Would you like to add it to the dictionary (Y or N)?
             //    
             
-            //    2.a)
+            //    3.b)
             //    If the user enters 'Y', the system enters the message:
-            //    Please enter an English word and its translation, separated by ':'
-            //    For example: 'Sky:Ciel'
+            //    Please enter a french word for this English word:
+            //    For example: Ciel
             //   
-            //    Once the word is added to the file, the system displays:
+            //    Once the word is added to the dictionry, the system displays:
             //    The word 'Sky' has been added to the dictionary
             //    
             //    The system continues normally with the message
             //    Please enter an English word:
             //
-            //    2.b)
+            //    3.c)
             //    If the user enters, 'N', then the word is not added to the dictionary.
             //    The system displays:
-            //    You have chosen not to add the 'Ciel' to the dictionay.
+            //    You have chosen not to add the word 'Ciel' to the dictionay.
             //    Then, the system continues normally with the message
             //    Please enter an English word:
             // 
             // Let me know if you have any questions about what needs to be done.
             // (in software, we call these requirements)
             // 
-            // Feel free to make any changes to get the program to work.
+            // Feel free to make any changes to get the program to make it work.
 
             //  Translation.GetDictionaryData();
 
