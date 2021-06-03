@@ -11,7 +11,7 @@ namespace DictionaryLesson
     {
         //private static string key;
         //public Dictionary<string, string> wordsInDictionary;
-        //private string filename = @"EnglishDictionay.txt";
+        private string filename = @"EnglishDictionay.txt";
         public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
 
         public string frenchWord;
@@ -184,9 +184,15 @@ namespace DictionaryLesson
             }
             Console.WriteLine(output);
         }
+         //question :
+         // i wrote this code , but no result 
+         // if you can explain to me to fix it
         public void SaveDictionaryToFile()
         {
-           
+            using StreamWriter file = new StreamWriter(filename);
+               foreach (var entry in wordsInDictionary)
+                   file.WriteLine("{0} {1}", entry.Key, entry.Value);
+            file.Close();
         }
     }
 }
