@@ -11,9 +11,13 @@ namespace DictionaryLesson
     {
         //private static string key;
         //public Dictionary<string, string> wordsInDictionary;
-        private string filename = @"EnglishDictionay.txt";
+        //private string filename = @"EnglishDictionay.txt";
         public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
+
         public string frenchWord;
+
+        
+
         //public Dictionary<string, string> GetDictionaryData()
         //{
         //    //    string filename = @"TranslationFile.txt";
@@ -132,10 +136,8 @@ namespace DictionaryLesson
                 if (answer == "Y")
                 {
                     Console.WriteLine("Please enter a french word for this English word:");
-                    string frenchWord = Console.ReadLine();
-                    StreamWriter sw = new StreamWriter(filename);
-                    sw.WriteLine(userInput, frenchWord);
-                    sw.Close();
+                     frenchWord = Console.ReadLine();
+                    wordsInDictionary.Add(userInput, frenchWord);
                     Console.WriteLine($"The word '{userInput}' has been added to the dictionary");
                 }
                 if (answer == "N")
@@ -146,31 +148,45 @@ namespace DictionaryLesson
                 }
             }
             // question 2:
-            if (isWordInDictionary == true)
+            //if (isWordInDictionary == true)
+            //{
+
+            //    StreamReader file = new(filename);
+            //    string line = file.ReadLine();
+            //    while (line != null)
+            //    {
+
+            //        String[] words = line.Split(';');
+
+            //        foreach (string item in words)
+            //        {
+            //            String[] meaningOfWord = item.Split(':');
+
+            //            string value = meaningOfWord[0];
+            //            Console.WriteLine($"The French word for '{userInput}' is '{value}'");
+            //        }
+            //    }
+            //    file.Close();
+            //    foreach (char t in userInput)
+            //    {
+            //       Console.WriteLine($"The French word for '{t}' is '{frenchWord}'");
+            //    }
+
+           // }
+        }
+        public void PrintDictionary()
+        {
+            string output = "";
+            foreach (KeyValuePair<string, string> kvp in wordsInDictionary)
             {
-
-                StreamReader file = new(filename);
-                string line = file.ReadLine();
-                while (line != null)
-                {
-
-                    String[] words = line.Split(';');
-
-                    foreach (string item in words)
-                    {
-                        String[] meaningOfWord = item.Split(':');
-
-                        string value = meaningOfWord[0];
-                        Console.WriteLine($"The French word for '{userInput}' is '{value}'");
-                    }
-                }
-                file.Close();
-                foreach (char t in userInput)
-                {
-                   Console.WriteLine($"The French word for '{t}' is '{frenchWord}'");
-                }
-
+                output = output+ string.Format("The French word for '{0}' is '{1}'", kvp.Key, kvp.Value);
+                
             }
+            Console.WriteLine(output);
+        }
+        public void SaveDictionaryToFile()
+        {
+           
         }
     }
 }
