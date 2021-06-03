@@ -121,9 +121,9 @@ namespace DictionaryLesson
         public void AddWordToDictionary(string userInput, bool isWordInDictionary)
         {
             
-            
             if (isWordInDictionary == false)
             {
+                // 
                 Console.WriteLine("This word does not exist in the dictionary.");
 
                 Console.WriteLine("Would you like to add it to the dictionary (Y or N)?");
