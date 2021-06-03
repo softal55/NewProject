@@ -31,9 +31,10 @@ namespace DictionaryLesson
 
             // Complete the following method.
             // The method adds the word to dictionary if it does not exist.
-            
+
             // Task 3
-            // Translation.AddWordToDictionary(userInput, isWordInDictionary);
+            Translation translation = new Translation();
+            translation.AddWordToDictionary(userInput, isWordInDictionary);
             // Here is  the description for this method.
             //   3.a)
             //   If the word that does not exist in the dictionary, the program displays a message saying:
