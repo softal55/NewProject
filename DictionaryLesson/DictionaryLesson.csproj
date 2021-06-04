@@ -23,12 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="EnglishDictionayNew.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="EnglishDictionay_Backup.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="EnglishDictionay.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
