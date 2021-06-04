@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 
 // Watch these videos on dictiony in C#
 // https://www.youtube.com/watch?v=jOLFsT6j9Wg
@@ -37,7 +38,15 @@ namespace DictionaryLesson
             translation.AddWordToDictionary(userInput, isWordInDictionary);
             translation.PrintDictionary();
             // See this page for samples to write a dictionary tpo a file.
+            //string myPath = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
+            //string dictionaryLessonDir = Directory.GetParent(myPath).ToString();
+            //translation.CreateFile();
+            Console.WriteLine("Original file.....");
+            translation.PrintFileToScreen();
             translation.SaveDictionaryToFile();
+
+            Console.WriteLine("Modified file.....");
+            translation.PrintFileToScreen();
             // Here is  the description for this method.
             //   3.a)
             //   If the word that does not exist in the dictionary, the program displays a message saying:
@@ -45,7 +54,7 @@ namespace DictionaryLesson
             //   (Assume the user entered 'Sky')
             //    Would you like to add it to the dictionary (Y or N)?
             //    
-            
+
             //    3.b)
             //    If the user enters 'Y', the system enters the message:
             //    Please enter a french word for this English word:
@@ -70,6 +79,7 @@ namespace DictionaryLesson
             // Feel free to make any changes to get the program to make it work.
 
             //  Translation.GetDictionaryData();
+
 
         }
     }

@@ -11,12 +11,69 @@ namespace DictionaryLesson
     {
         //private static string key;
         //public Dictionary<string, string> wordsInDictionary;
-        private string filename = @"EnglishDictionay.txt";
+        private static string fileName = @"EnglishDictionay.txt";
         public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
 
         public string frenchWord;
 
-        
+        public void CreateFile()
+        {
+            //string fileName = @"EnglishDictionayHello.txt";
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string startupPath = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+            string fileRelativePath = Path.Combine(startupPath, fileName);
+
+            if (!File.Exists(fileRelativePath))
+            {
+                // Create a file to write to.
+                using (StreamWriter sw = File.CreateText(fileRelativePath))
+                {
+                    sw.WriteLine("Hello");
+                    sw.WriteLine("And");
+                    sw.WriteLine("Welcome");
+                }
+            }
+
+
+
+            //string projectPath = Path.GetFullPath(@"..\..\..");
+
+            //var relativeProjectPath = @"..\DictionaryLesson\";
+
+
+            //string filePath = Directory.GetParent(Directory.GetParent(filename).ToString()).ToString();
+            //String path = "..\\FolderIcon\\Folder.ico"
+
+            //string currentDir = Directory.GetCurrentDirectory().Parent.Parent.Parent.FullName;//.GetParent(path).ToString();
+            //string dictionaryLessonDir = Directory.GetParent(path);
+            //string fileLocation = Directory.GetParent(dictionaryLessonDir).ToString();
+            // Open the file to read from.
+            using (StreamReader sr = File.OpenText(fileRelativePath))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+        }
+
+        public void PrintFileToScreen()
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string startupPath = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+            string fileRelativePath = Path.Combine(startupPath, fileName);
+            using (StreamReader sr = File.OpenText(fileRelativePath))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+        }
+
+
 
         //public Dictionary<string, string> GetDictionaryData()
         //{
@@ -189,10 +246,77 @@ namespace DictionaryLesson
          // if you can explain to me to fix it
         public void SaveDictionaryToFile()
         {
-            using StreamWriter file = new StreamWriter(filename);
-               foreach (var entry in wordsInDictionary)
-                   file.WriteLine("{0} {1}", entry.Key, entry.Value);
-            file.Close();
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string startupPath = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+            string fileRelativePath = Path.Combine(startupPath, fileName);
+
+            using (StreamWriter w = File.AppendText(fileRelativePath))
+            {
+                foreach (var entry in wordsInDictionary)
+                {
+                    //SaveEntryToFile(w, entry);
+                    w.WriteLine("{0} {1}", entry.Key, entry.Value);
+                }
+            }
+
+            
+
+            //using (StreamWriter w = File.AppendText(filename))
+            //{
+            //    foreach (var entry in wordsInDictionary)
+            //    {
+            //        w.WriteLine("{0} {1}", entry.Key, entry.Value);
+            //    }
+            //}
+
+            //using StreamWriter file = new StreamWriter(filename);
+            //   foreach (var entry in wordsInDictionary)
+            //       file.WriteLine("{0} {1}", entry.Key, entry.Value);
+            //file.Close();
+        
+        }
+
+        private void SaveEntryToFile(StreamWriter w, KeyValuePair<string, string> entry)
+        {
+            try
+            {
+                w.WriteLine("{0} {1}", entry.Key, entry.Value);
+                //w.WriteAllText("c:\\temp\\output.txt", "Hello World");
+            }
+            catch (DirectoryNotFoundException dirNotFoundException)
+            {
+                Console.WriteLine(dirNotFoundException.Message);
+            }
+            catch (UnauthorizedAccessException unauthorizedAccessException)
+            {
+                Console.WriteLine(unauthorizedAccessException.Message);
+            }
+            catch (IOException ioException)
+            {
+                Console.WriteLine(ioException.Message);
+                //logger.Error(ioException, "Error during file write");
+                // Show a message to the user
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception.Message);
+                //logger.Fatal(exception, "We need to handle this better");
+                // Show general message to the user
+            }
+        }
+
+        public static void DumpLog()
+        {
+            using (StreamReader r = File.OpenText(fileName))
+            {
+              string line;
+            while ((line = r.ReadLine()) != null)
+            {
+                Console.WriteLine(line);
+            }
+            }
+
+
         }
     }
 }
