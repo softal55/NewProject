@@ -23,13 +23,11 @@ namespace DictionaryLesson
             // Print the word we just added to the dictionay
             translation.PrintDictionary();
 
-            // Print the dictionary file before adding the word to it.
-            translation.PrintFileToScreen();
-
             // Add the new word to the dictionary if it is not alreday in the dictionary.
             translation.SaveDictionaryToFile();
 
             // Print the updated dictionary file. It should contain the new word that we just added.
+            Console.WriteLine("The dictionay contains the following words:");
             translation.PrintFileToScreen();
 
         }
