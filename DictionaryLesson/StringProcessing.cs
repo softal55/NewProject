@@ -32,7 +32,7 @@ namespace DictionaryLesson
 
             while (true)
             {
-                Console.WriteLine("please enter a word : ");
+                Console.WriteLine("please enter a english word : ");
                 string userInput = Console.ReadLine();
 
                 //  1.1

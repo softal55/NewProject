@@ -1,5 +1,6 @@
-﻿House: Maison; Water: Eau; Sky: Ciel;
-Hello HAHA
-HELLO HAHI
-Hello Hellow
-Hat What
+﻿House: Maison;
+Water: Eau; 
+Sky: Ciel;
+Job: Travail;
+Money: L'argent;
+Health: Sante;
