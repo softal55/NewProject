@@ -11,7 +11,6 @@ namespace DictionaryLesson
     {
         private static string fileName = @"EnglishDictionay.txt";
         public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
-
         public string frenchWord;
 
 
@@ -28,6 +27,11 @@ namespace DictionaryLesson
                     Console.WriteLine(s);
                 }
             }
+        }
+
+        public void LoadFileToDictionary()
+        {
+            throw new NotImplementedException();
         }
 
         public static bool VerifyWordInDictionary(string userInput)

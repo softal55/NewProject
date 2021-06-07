@@ -10,12 +10,20 @@ namespace DictionaryLesson
     class Program
     {
         static void Main(string[] args)
-        {           
-            string userInput = StringProcessing.GetValidInput();
-           
-            bool isWordInDictionary = Translation.VerifyWordInDictionary(userInput);
-
+        {              
             Translation translation = new Translation();
+
+            // Task to do.
+            // We need to load the file to Dictionary
+            translation.LoadFileToDictionary();
+
+
+
+            string userInput = StringProcessing.GetValidInput();
+            
+
+            
+            bool isWordInDictionary = Translation.VerifyWordInDictionary(userInput);
 
             // Add a word to the dictionary
             translation.AddWordToDictionary(userInput, isWordInDictionary);
