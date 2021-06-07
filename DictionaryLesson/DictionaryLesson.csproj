@@ -6,23 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="bin\Debug\net5.0\DictionaryLesson.deps.json" />
-    <Content Include="bin\Debug\net5.0\DictionaryLesson.runtimeconfig.dev.json" />
-    <Content Include="bin\Debug\net5.0\DictionaryLesson.runtimeconfig.json" />
-    <Content Include="bin\Debug\net5.0\EnglishDictionay.txt" />
-    <Content Include="bin\Debug\net5.0\EnglishDictionayABC.txt" />
-    <Content Include="bin\Debug\net5.0\EnglishDictionayNew.txt" />
-    <Content Include="bin\Debug\net5.0\EnglishDictionay_Backup.txt" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="bin\Debug\net5.0\DictionaryLesson.dll" />
-    <None Include="bin\Debug\net5.0\DictionaryLesson.exe" />
-    <None Include="bin\Debug\net5.0\DictionaryLesson.pdb" />
-    <None Include="bin\Debug\net5.0\ref\DictionaryLesson.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Update="EnglishDictionay.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
