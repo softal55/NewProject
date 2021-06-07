@@ -4,3 +4,5 @@ Sky: Ciel;
 Job: Travail;
 Money: L'argent;
 Health: Sante;
+war: guerre;
+

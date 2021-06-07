@@ -51,7 +51,7 @@ namespace Colors
                     break;
                 default:
                     Console.WriteLine(" Your entered an invalid number, please try again.");
-                    break;
+                    countinue;
 
             }
         }
