@@ -15,7 +15,7 @@ namespace DictionaryLesson
 
             // Task to do.
             // We need to load the file to Dictionary
-            translation.LoadFileToDictionary();
+            translation.LoadFileToDictionary(userInpu);
 
 
 

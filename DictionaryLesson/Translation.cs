@@ -31,7 +31,19 @@ namespace DictionaryLesson
 
         public void LoadFileToDictionary()
         {
-            throw new NotImplementedException();
+            StreamReader file = new(fileName);
+            string line = file.ReadLine();
+            while(line != null)
+            {
+                String[] words = line.Split(';');
+                foreach(string item in words)
+                {
+                    String[] meaningOfWord = item.Split(':');
+                    string key = meaningOfWord[0];
+                    string value= meaningOfWord[1];
+                    wordsInDictionary.Add(key , value);
+                }
+            }
         }
 
         public static bool VerifyWordInDictionary(string userInput)
