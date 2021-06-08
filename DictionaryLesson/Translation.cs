@@ -31,6 +31,9 @@ namespace DictionaryLesson
 
         public void LoadFileToDictionary()
         {
+            // This method has a bug.
+            // This is your oppportinity to learn more aboit debugging :)
+            // 
             StreamReader file = new(fileName);
             string line = file.ReadLine();
             // Hint: 
