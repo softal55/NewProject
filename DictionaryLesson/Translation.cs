@@ -33,7 +33,19 @@ namespace DictionaryLesson
         {
             StreamReader file = new(fileName);
             string line = file.ReadLine();
-            while(line != null)
+            // Hint: 
+            // Set a breakpoint at line 34 
+            // Use F11 to trace the execution of this method.
+            // Watch these videos to learn more about F10, F11, and F12
+            // Video 1:
+            // https://www.youtube.com/watch?v=QCPt9aOcd98
+            //
+            // Video 2:
+            // https://www.youtube.com/watch?v=yFH4GhZIss4
+            //
+            // If you cannot find the bug today, I will give you a hint tomorrow :)
+            // 
+            while (line != null)
             {
                 String[] words = line.Split(';');
                 foreach(string item in words)

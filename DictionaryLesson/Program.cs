@@ -15,13 +15,9 @@ namespace DictionaryLesson
 
             // Task to do.
             // We need to load the file to Dictionary
-            translation.LoadFileToDictionary(userInpu);
-
-
+            translation.LoadFileToDictionary();
 
             string userInput = StringProcessing.GetValidInput();
-            
-
             
             bool isWordInDictionary = Translation.VerifyWordInDictionary(userInput);
 
