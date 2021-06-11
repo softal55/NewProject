@@ -31,8 +31,10 @@ namespace DictionaryLesson
 
         public void LoadFileToDictionary()
         {
-            // This method has a bug.
-            // This is your oppportinity to learn more aboit debugging :)
+            // NOTE: 
+            // Place a breakpoint at the next line (line 39)
+            // Then trace the execution with F11
+            // hover over the variables to see their value
             // 
             StreamReader file = new(fileName);
             string line = file.ReadLine();
@@ -50,13 +52,37 @@ namespace DictionaryLesson
             // 
             while (line != null)
             {
+                // 1. When line = House: Maison;
                 String[] words = line.Split(';');
-                foreach(string item in words)
+                // 2. Since we are splitting the line at ';'
+                // words[0] = House: Maison
+                // words[1] = ""
+                foreach (string item in words)
                 {
-                    String[] meaningOfWord = item.Split(':');
-                    string key = meaningOfWord[0];
+                    // 1. First time inside this loop
+                    // 1.1 item is  'House: Maison'
+                    String [] meaningOfWord = item.Split(':');
+                    // 1.2. Since we are splitting on the ':'
+                    // 1.3 meaningOfWord[0] = House
+                    // 1.4 meaningOfWord[1] = Maison
+                    string key = meaningOfWord[0]; 
+                    // 1.5 key = House
                     string value= meaningOfWord[1];
+                    // 1.6 value = Maison
                     wordsInDictionary.Add(key , value);
+
+                    //// 2. Second time inside this loop
+                    //// 2.1 item is  ""
+                    //String[] meaningOfWord = item.Split(':');
+                    //// 2.2. We are splitting on the ':'
+                    ///       BUT this time, 'item' is "" which is null, so 
+                    //// 2.3 meaningOfWord[0] = null  this OK.
+                    //// 2.4 meaningOfWord[1] = does not exist!!! bug 
+                    //string key = meaningOfWord[0];
+                    //// 2.5 key = "" 
+                    //string value = meaningOfWord[1];
+                    //// 2.6 value = DOES NOT EXIST!!!
+                    //wordsInDictionary.Add(key, value);
                 }
             }
         }
