@@ -9,74 +9,100 @@ namespace DictionaryLesson
 {
     class Program
     {
+        
+        public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the 'English-French' dictionary!\n");
 
             Translation translation = new Translation();
-
-            // Load the file to Dictionary
-            translation.LoadFileToDictionary();
-
-            bool updateDictionary = true;
-            string answer;
-            do
+            while (true)
             {
-                ManageDictionary(translation);
-                Console.WriteLine("Would you like to enter another word?");
-                answer = Console.ReadLine().ToUpper();
-
-                if (answer == "N")
+                Console.WriteLine("Would you like to update the dictionary or use it?");
+                int i = int.Parse(Console.ReadLine());
+                if (i == 1)
                 {
-                    Console.WriteLine("Thank you for using the dictionary , you can close the app with any key");
-                    updateDictionary = false;
-                    Console.ReadKey();
-                }
 
-            } while (updateDictionary);
+                    // Load the file to Dictionary
+                    translation.LoadFileToDictionary();
+
+                    bool updateDictionary = true;
+                    string answer;
+                    do
+                    {
+                        ManageDictionary(translation);
+                        Console.WriteLine("Would you like to enter another word?");
+                        answer = Console.ReadLine().ToUpper();
+
+                        if (answer == "N")
+                        {
+                            Console.WriteLine("Thank you for using the dictionary , you can close the app with any key");
+                            updateDictionary = false;
+                            Console.ReadKey();
+                        }
+
+                    } while (updateDictionary);
+                    break;
+                }
+                if (i == 2)
+                {
+                    StringProcessing.GetValidInput();
+                    translation.LoadFileToDictionary();
+
+                    string output = "";
+                    foreach (KeyValuePair<string, string> kvp in wordsInDictionary)
+                    {
+                        output = output + string.Format("'{0}':'{1}'", kvp.Key, kvp.Value) + "\n";
+
+                    }
+                    Console.WriteLine(output);
+                    break;
+                }
+            }
         }
-
-        private static void ManageDictionary(Translation translation)
-        {
-            //Console.WriteLine("Welcome to the 'English-French' dictionary!\n");
-            //Translation translation = new Translation();
-
-            //// Load the file to Dictionary
-            //translation.LoadFileToDictionary();
-
-            string userInput = StringProcessing.GetValidInput();
-
-            bool isWordInDictionary = Translation.VerifyWordInDictionary(userInput);
-
-            if (isWordInDictionary)
+            private static void ManageDictionary(Translation translation)
             {
-                Console.WriteLine($"The word '{userInput}' was not added to the dictionary because it already exist in the dictionary.\n");
-            }
+                //Console.WriteLine("Welcome to the 'English-French' dictionary!\n");
+                //Translation translation = new Translation();
 
-            // NOTE: the '!' means 'NOT'.
-            // So, this is the same as saying (if not isWordInDictionary) of (if isWordInDictionary == false)
-            if (!isWordInDictionary)
-            {
-                Console.WriteLine($"The word '{userInput}' does not exist in the dictionary.");
-                Console.WriteLine("Would you like to add it to the dictionary (Y or N)?");
-                string answer = Console.ReadLine().ToUpper();
-                if (answer == "Y")
+                //// Load the file to Dictionary
+                //translation.LoadFileToDictionary();
+
+                string userInput = StringProcessing.GetValidInput();
+
+                bool isWordInDictionary = Translation.VerifyWordInDictionary(userInput);
+
+                if (isWordInDictionary)
                 {
-                    // Add a word to the dictionary
-                    translation.NewMethod_AddWordToDictionary(userInput);
+                    Console.WriteLine($"The word '{userInput}' was not added to the dictionary because it already exist in the dictionary.\n");
                 }
 
-                if (answer == "N")
+                // NOTE: the '!' means 'NOT'.
+                // So, this is the same as saying (if not isWordInDictionary) of (if isWordInDictionary == false)
+                if (!isWordInDictionary)
                 {
-                    Console.WriteLine($"You have chosen not to add the word '{userInput}' to the dictionay.");
-                    //Console.WriteLine("Would you like to enter another word?");
+                    Console.WriteLine($"The word '{userInput}' does not exist in the dictionary.");
+                    Console.WriteLine("Would you like to add it to the dictionary (Y or N)?");
+                    string answer = Console.ReadLine().ToUpper();
+                    if (answer == "Y")
+                    {
+                        // Add a word to the dictionary
+                        translation.NewMethod_AddWordToDictionary(userInput);
+                    }
+
+                    if (answer == "N")
+                    {
+                        Console.WriteLine($"You have chosen not to add the word '{userInput}' to the dictionay.");
+                        //Console.WriteLine("Would you like to enter another word?");
+                    }
                 }
+
+                translation.SaveDictionaryToFile();
+                translation.PrintDictionary();
+
+                Console.ReadKey();
             }
-
-            translation.SaveDictionaryToFile();
-            translation.PrintDictionary();
-
-            Console.ReadKey();
         }
     }
-}
+
+

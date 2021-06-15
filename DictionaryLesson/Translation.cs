@@ -13,7 +13,7 @@ namespace DictionaryLesson
         public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
         public string frenchWord;
 
-
+        
         public void PrintFileToScreen()
         {
             string currentDirectory = Directory.GetCurrentDirectory();
@@ -37,10 +37,11 @@ namespace DictionaryLesson
             while (line != null)
             {
                 String[] meaningOfWord = line.Split(':');
-                string key = meaningOfWord[0];
+                string  key = meaningOfWord[0];
                 string value = meaningOfWord[1];
                 wordsInDictionary.Add(key, value);
                 line = file.ReadLine();
+                
             }
         }
 
@@ -124,6 +125,8 @@ namespace DictionaryLesson
             Console.WriteLine("Here are the current words in the dictionary:\n");
             Console.WriteLine(output);
         }
+       
+        
 
         public void SaveDictionaryToFile()
         {
@@ -139,6 +142,7 @@ namespace DictionaryLesson
                 }
             }
         }
+       
     }
 }
 
