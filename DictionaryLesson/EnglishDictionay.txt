@@ -4,6 +4,3 @@ Sky:Ciel
 Job:Travail
 Money:Argent
 War:Guerre
-ABC:AAA
-Hello:Haha
-Haha:
