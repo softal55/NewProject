@@ -1,6 +1,9 @@
-﻿House:Maison
-Water:Eau 
-Sky:Ciel 
+House:Maison
+Water:Eau
+Sky:Ciel
 Job:Travail
-Money:L'argent 
-war: guerre
+Money:Argent
+War:Guerre
+ABC:AAA
+Hello:Haha
+Haha:
