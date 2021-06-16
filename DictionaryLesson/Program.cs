@@ -10,7 +10,7 @@ namespace DictionaryLesson
     class Program
     {
         
-        public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
+
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the 'English-French' dictionary!\n");
@@ -46,17 +46,44 @@ namespace DictionaryLesson
                 }
                 if (i == 2)
                 {
-                    StringProcessing.GetValidInput();
+
+                    // Hint 1
+                    // First, we load the words from the file to the dictionary. 
                     translation.LoadFileToDictionary();
+                    // Now the 'Translation' class knows about the dictionary, but this 'Main' program does not know about it yet.
 
-                    string output = "";
-                    foreach (KeyValuePair<string, string> kvp in wordsInDictionary)
-                    {
-                        output = output + string.Format("'{0}':'{1}'", kvp.Key, kvp.Value) + "\n";
+                    // Hint 2.
+                    // To use the dictionary in this 'Main' program, we need to ask the 'Translation' class to give us the
+                    // values in the dictionary
+                    // So, we will declare a new varibale in this 'Main' program to hold
+                    // the values of the dictionary that the 'Translation' class knows about.
+                    // And, remember, this is just a declaration. We can give this dictionary any name.
+                    // I gave it the name 'englishDictionary', and right now, it is empty.
+                    Dictionary<string, string> englishDictionary = new Dictionary<string, string>();
 
-                    }
-                    Console.WriteLine(output);
-                    break;
+                    // Hint 3
+                    // Let us ask the 'Translation' class to give us the values of the dictionary, and we will put them in our
+                    // dictionary 'englishDictionary'
+                    // Your task is to complete the following method :)
+                    // englishDictionary = translation.GetDictionary();
+                    
+
+                    // Get the word that the user enters for translation!
+                    string userInput = StringProcessing.GetValidInput();
+                   // Console.WriteLine(translatedWord);
+
+
+                    //// Hint 4
+                    //// You do not need this section. This loop just prints the words that the dictionary holds. Correct?
+                    ///// delete it!
+                    //string output = "";
+                    //foreach (KeyValuePair<string, string> kvp in wordsInDictionary)
+                    //{
+                    //    output = output + string.Format("'{0}':'{1}'", kvp.Key, kvp.Value) + "\n";
+
+                    //}
+
+                    //break;
                 }
             }
         }

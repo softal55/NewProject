@@ -106,6 +106,7 @@ namespace DictionaryLesson
             }
         }
 
+
         public void NewMethod_AddWordToDictionary(string userInput)
         {
             Console.WriteLine("Please enter a french word for this English word:");

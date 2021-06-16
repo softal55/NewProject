@@ -4,3 +4,4 @@ Sky:Ciel
 Job:Travail
 Money:Argent
 War:Guerre
+Hat:Chapeau
