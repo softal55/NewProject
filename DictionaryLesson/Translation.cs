@@ -13,7 +13,7 @@ namespace DictionaryLesson
         public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
         public string frenchWord;
 
-        
+
         public void PrintFileToScreen()
         {
             string currentDirectory = Directory.GetCurrentDirectory();
@@ -37,11 +37,11 @@ namespace DictionaryLesson
             while (line != null)
             {
                 String[] meaningOfWord = line.Split(':');
-                string  key = meaningOfWord[0];
+                string key = meaningOfWord[0];
                 string value = meaningOfWord[1];
                 wordsInDictionary.Add(key, value);
                 line = file.ReadLine();
-                
+
             }
         }
 
@@ -105,8 +105,7 @@ namespace DictionaryLesson
                 }
             }
         }
-
-
+       
         public void NewMethod_AddWordToDictionary(string userInput)
         {
             Console.WriteLine("Please enter a french word for this English word:");
@@ -143,7 +142,14 @@ namespace DictionaryLesson
                 }
             }
         }
-       
+
+        public Dictionary<string, string> GetDictionary()
+        {
+            Dictionary<string, string> englishDictionary = new Dictionary<string, string>(wordsInDictionary);
+
+            return englishDictionary;
+        }
+
     }
 }
 

@@ -9,7 +9,7 @@ namespace DictionaryLesson
 {
     class Program
     {
-        
+        //private static bool translatedWord;
 
         static void Main(string[] args)
         {
@@ -65,25 +65,18 @@ namespace DictionaryLesson
                     // Let us ask the 'Translation' class to give us the values of the dictionary, and we will put them in our
                     // dictionary 'englishDictionary'
                     // Your task is to complete the following method :)
-                    // englishDictionary = translation.GetDictionary();
-                    
+                    englishDictionary = translation.GetDictionary();
+
 
                     // Get the word that the user enters for translation!
                     string userInput = StringProcessing.GetValidInput();
-                   // Console.WriteLine(translatedWord);
-
+                    //  Console.WriteLine(translatedWord);
+                    // Console.WriteLine(englishDictionary);
 
                     //// Hint 4
                     //// You do not need this section. This loop just prints the words that the dictionary holds. Correct?
                     ///// delete it!
-                    //string output = "";
-                    //foreach (KeyValuePair<string, string> kvp in wordsInDictionary)
-                    //{
-                    //    output = output + string.Format("'{0}':'{1}'", kvp.Key, kvp.Value) + "\n";
 
-                    //}
-
-                    //break;
                 }
             }
         }
