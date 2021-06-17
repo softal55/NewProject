@@ -14,12 +14,19 @@ namespace DictionaryLesson
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the 'English-French' dictionary!\n");
-
+            bool terminateProgram = false;
             Translation translation = new Translation();
-            while (true)
+            while (terminateProgram == false)
             {
                 Console.WriteLine("Would you like to update the dictionary or use it?");
+                Console.WriteLine("To update, Enter 1");
+                Console.WriteLine("To use it, enter 2");
+                Console.WriteLine("To exit, enter 3");
                 int i = int.Parse(Console.ReadLine());
+                if (i == 3)
+                {
+                    terminateProgram = true;
+                }
                 if (i == 1)
                 {
 
@@ -46,36 +53,23 @@ namespace DictionaryLesson
                 }
                 if (i == 2)
                 {
-
-                    // Hint 1
                     // First, we load the words from the file to the dictionary. 
                     translation.LoadFileToDictionary();
-                    // Now the 'Translation' class knows about the dictionary, but this 'Main' program does not know about it yet.
 
-                    // Hint 2.
-                    // To use the dictionary in this 'Main' program, we need to ask the 'Translation' class to give us the
-                    // values in the dictionary
-                    // So, we will declare a new varibale in this 'Main' program to hold
-                    // the values of the dictionary that the 'Translation' class knows about.
-                    // And, remember, this is just a declaration. We can give this dictionary any name.
-                    // I gave it the name 'englishDictionary', and right now, it is empty.
                     Dictionary<string, string> englishDictionary = new Dictionary<string, string>();
 
-                    // Hint 3
-                    // Let us ask the 'Translation' class to give us the values of the dictionary, and we will put them in our
-                    // dictionary 'englishDictionary'
-                    // Your task is to complete the following method :)
                     englishDictionary = translation.GetDictionary();
-
 
                     // Get the word that the user enters for translation!
                     string userInput = StringProcessing.GetValidInput();
-                    //  Console.WriteLine(translatedWord);
+                    string translatedWord = null;
+                    if (englishDictionary.ContainsKey(userInput))
+                    {
+                        translatedWord = englishDictionary[userInput];
+                    }
+                    //string wordTranslation = englishDictionary[userInput]
+                    Console.WriteLine(translatedWord);
                     // Console.WriteLine(englishDictionary);
-
-                    //// Hint 4
-                    //// You do not need this section. This loop just prints the words that the dictionary holds. Correct?
-                    ///// delete it!
 
                 }
             }

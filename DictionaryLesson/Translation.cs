@@ -145,9 +145,9 @@ namespace DictionaryLesson
 
         public Dictionary<string, string> GetDictionary()
         {
-            Dictionary<string, string> englishDictionary = new Dictionary<string, string>(wordsInDictionary);
-
-            return englishDictionary;
+            //Dictionary<string, string> englishDictionary = new Dictionary<string, string>(wordsInDictionar
+         
+            return wordsInDictionary;
         }
 
     }
