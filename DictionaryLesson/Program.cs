@@ -53,12 +53,14 @@ namespace DictionaryLesson
                 }
                 if (i == 2)
                 {
-                    // First, we load the words from the file to the dictionary. 
+                    // First, we load the words from the file to the dictionary.
+                    
+                    
                     translation.LoadFileToDictionary();
 
-                    Dictionary<string, string> englishDictionary = new Dictionary<string, string>();
+                  //  Dictionary<string, string> englishDictionary = new Dictionary<string, string>();
 
-                    englishDictionary = translation.GetDictionary();
+                    Dictionary<string, string> englishDictionary = translation.GetDictionary();
 
                     // Get the word that the user enters for translation!
                     string userInput = StringProcessing.GetValidInput();
@@ -66,11 +68,12 @@ namespace DictionaryLesson
                     if (englishDictionary.ContainsKey(userInput))
                     {
                         translatedWord = englishDictionary[userInput];
+                       
+                      Console.WriteLine($"The translation of the word '{userInput}' is '{translatedWord}'");
                     }
-                    //string wordTranslation = englishDictionary[userInput]
-                    Console.WriteLine(translatedWord);
-                    // Console.WriteLine(englishDictionary);
 
+                    //Console.WriteLine(translatedWord);
+                    //Console.WriteLine($"its translation in french is '{translatedWord});
                 }
             }
         }

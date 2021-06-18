@@ -28,21 +28,25 @@ namespace DictionaryLesson
                 }
             }
         }
-
+        private bool w = false;
         public void LoadFileToDictionary()
         {
-            StreamReader file = new(fileName);
-            string line = file.ReadLine();
-
-            while (line != null)
+            if (!w)
             {
-                String[] meaningOfWord = line.Split(':');
-                string key = meaningOfWord[0];
-                string value = meaningOfWord[1];
-                wordsInDictionary.Add(key, value);
-                line = file.ReadLine();
+                StreamReader file = new(fileName);
+                string line = file.ReadLine();
 
-            }
+                while (line != null)
+                {
+                    String[] meaningOfWord = line.Split(':');
+                    string key = meaningOfWord[0];
+                    string value = meaningOfWord[1];
+                    wordsInDictionary.Add(key, value);
+                    line = file.ReadLine();
+                }
+                file.Close();
+                w = true;
+            }  
         }
 
         public static bool VerifyWordInDictionary(string userInput)
