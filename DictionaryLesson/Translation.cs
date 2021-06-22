@@ -76,6 +76,7 @@ namespace DictionaryLesson
 
             if (isWordInDictionary == false)
             {
+               
                 Console.WriteLine("This word does not exist in the dictionary.");
                 Console.WriteLine("Would you like to add it to the dictionary (Y or N)?");
                 string answer = Console.ReadLine().ToUpper();

@@ -67,6 +67,10 @@ namespace DictionaryLesson
                         translatedWord = englishDictionary[userInput];
                         Console.WriteLine($"The translation of the word '{userInput}' is '{translatedWord}'");
                     }
+                    else
+                    {
+                        Console.WriteLine("The word you entered is not in the dictionary");
+                    }
                 }
             }
         }
