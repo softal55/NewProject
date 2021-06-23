@@ -5,4 +5,4 @@ Job:Travail
 Money:Argent
 War:Guerre
 Hat:Chapeau
-Table:Table
+Table:Tableau

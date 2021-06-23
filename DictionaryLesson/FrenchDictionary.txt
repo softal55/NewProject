@@ -1,0 +1,9 @@
+Maison:House
+Eau:Water
+Ciel:Sky
+Travail:Job
+Argent:Money
+Guerre:War
+Chapeau:Hat
+Tableau:Table
+

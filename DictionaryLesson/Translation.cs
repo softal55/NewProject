@@ -9,16 +9,17 @@ namespace DictionaryLesson
 {
     class Translation
     {
-        private static string fileName = @"EnglishDictionay.txt";
+        private static string EnglishFile = @"EnglishDictionay.txt";
+        private static string FrenchFile = @"FrenchDictionary.txt";
         public static Dictionary<string, string> wordsInDictionary = new Dictionary<string, string>();
         public string frenchWord;
+        public string englishWord;
 
-
-        public void PrintFileToScreen()
-        {
+        public void PrintEnglishFileToScreen()
+        { 
             string currentDirectory = Directory.GetCurrentDirectory();
             string startupPath = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
-            string fileRelativePath = Path.Combine(startupPath, fileName);
+            string fileRelativePath = Path.Combine(startupPath, EnglishFile);
             using (StreamReader sr = File.OpenText(fileRelativePath))
             {
                 string s = "";
@@ -28,12 +29,28 @@ namespace DictionaryLesson
                 }
             }
         }
-        private bool w = false;
-        public void LoadFileToDictionary()
+
+        public void PrintFrenchFileToScreen()
         {
-            if (!w)
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string startupPath = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+            string fileRelativePath = Path.Combine(startupPath, FrenchFile);
+            using (StreamReader sr = File.OpenText(fileRelativePath))
             {
-                StreamReader file = new(fileName);
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
+            }
+        }
+
+        private bool E = false;
+        public void LoadEnglishFileToDictionary()
+        {
+            if (!E)
+            {
+                StreamReader file = new(EnglishFile);
                 string line = file.ReadLine();
 
                 while (line != null)
@@ -45,15 +62,33 @@ namespace DictionaryLesson
                     line = file.ReadLine();
                 }
                 file.Close();
-                w = true;
+                E = true;
             }  
+        }
+
+        private bool F = false;
+        public void LoadFrenchFileToDictionary()
+        {
+            if (!F)
+            {
+                StreamReader file = new(FrenchFile);
+                string line = file.ReadLine();
+
+                while (line != null)
+                {
+                    String[] meaningOfWord = line.Split(':');
+                    string key = meaningOfWord[0];
+                    string value = meaningOfWord[1];
+                    wordsInDictionary.Add(key, value);
+                    line = file.ReadLine();
+                }
+                file.Close();
+                F = true;
+            }
         }
 
         public static bool VerifyWordInDictionary(string userInput)
         {
-            // If 'userInput' exists in the dictionary, the program return true
-            // If 'userInput' does not exist in the dictionary, the program return false
-
             bool keyExists = wordsInDictionary.ContainsKey(userInput);
             if (keyExists)
             {
@@ -63,17 +98,10 @@ namespace DictionaryLesson
             {
                 return false;
             }
-
-
         }
-        public void AddWordToDictionary(string userInput, bool isWordInDictionary)
-        {
-            //if (isWordInDictionary == true)
-            //{
-            //    Console.WriteLine($"The word '{userInput}' was not added to the dictionary because it already exist in the dictionary.\n");
-            //    return;
-            //}
 
+        public void AddFrenchWordToDictionary(string userInput, bool isWordInDictionary)
+        {
             if (isWordInDictionary == false)
             {
                
@@ -83,7 +111,7 @@ namespace DictionaryLesson
 
                 if (answer == "Y")
                 {
-                    NewMethod_AddWordToDictionary(userInput);
+                    NewMethod_AddFrenchWordToDictionary(userInput);
                     return;
                 }
                 if (answer == "N")
@@ -103,19 +131,64 @@ namespace DictionaryLesson
 
                         if (answer == "Y")
                         {
-                            StringProcessing.GetValidInput();
+                            EnterFrenchWord.enterFrenchWord();
                             continue;
                         }
                     }
                 }
             }
         }
-       
-        public void NewMethod_AddWordToDictionary(string userInput)
+        public void AddEnglishWordToDictionary(string userInput, bool isWordInDictionary)
+        {
+            if (isWordInDictionary == false)
+            {
+
+                Console.WriteLine("This word does not exist in the dictionary.");
+                Console.WriteLine("Would you like to add it to the dictionary (Y or N)?");
+                string answer = Console.ReadLine().ToUpper();
+
+                if (answer == "Y")
+                {
+                    NewMethod_AddEnglishWordToDictionary(userInput);
+                    return;
+                }
+                if (answer == "N")
+                {
+
+                    Console.WriteLine($"You have chosen not to add the word '{userInput}' to the dictionay.");
+                    Console.WriteLine("Would you like to enter another word?");
+                    answer = Console.ReadLine().ToUpper();
+
+                    while (true)
+                    {
+                        if (answer == "N")
+                        {
+                            Console.WriteLine("Thank you for using the dictionary , you can close the app with any key");
+                            Console.ReadKey();
+                        }
+
+                        if (answer == "Y")
+                        {
+                            EnterEnglishWord.enterEnglishWord();
+                            continue;
+                        }
+                    }
+                }
+            }
+        }
+
+        public void NewMethod_AddFrenchWordToDictionary(string userInput)
         {
             Console.WriteLine("Please enter a french word for this English word:");
-            frenchWord = Console.ReadLine();
+            frenchWord= Console.ReadLine();
             wordsInDictionary.Add(userInput, frenchWord);
+            Console.WriteLine($"The word '{userInput}' has been added to the dictionary");
+        }
+        public void NewMethod_AddEnglishWordToDictionary(string userInput)
+        {
+            Console.WriteLine("Please enter a English word for this french word:");
+            englishWord = Console.ReadLine();
+            wordsInDictionary.Add(userInput, englishWord);
             Console.WriteLine($"The word '{userInput}' has been added to the dictionary");
         }
 
@@ -131,13 +204,26 @@ namespace DictionaryLesson
             Console.WriteLine(output);
         }
        
-        
-
-        public void SaveDictionaryToFile()
+        public void SaveEnglishDictionaryToFile()
         {
             string currentDirectory = Directory.GetCurrentDirectory();
             string startupPath = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
-            string fileRelativePath = Path.Combine(startupPath, fileName);
+            string fileRelativePath = Path.Combine(startupPath, EnglishFile);
+
+            using (StreamWriter w = File.CreateText(fileRelativePath))
+            {
+                foreach (var entry in wordsInDictionary)
+                {
+                    w.WriteLine("{0}:{1}", entry.Key, entry.Value);
+                }
+            }
+        }
+
+        public void SaveFrenchDictionaryToFile()
+        {
+            string currentDirectory = Directory.GetCurrentDirectory();
+            string startupPath = Directory.GetParent(currentDirectory).Parent.Parent.FullName;
+            string fileRelativePath = Path.Combine(startupPath, FrenchFile);
 
             using (StreamWriter w = File.CreateText(fileRelativePath))
             {
@@ -150,11 +236,8 @@ namespace DictionaryLesson
 
         public Dictionary<string, string> GetDictionary()
         {
-            //Dictionary<string, string> englishDictionary = new Dictionary<string, string>(wordsInDictionar
-         
             return wordsInDictionary;
         }
-
     }
 }
 
