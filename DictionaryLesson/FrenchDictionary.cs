@@ -14,7 +14,7 @@ namespace DictionaryLesson
             Translation translation = new Translation();
             while (terminateProgram == false)
             {
-                Console.WriteLine("Would you like to update the dictionary or use it?");
+                Console.WriteLine("Would you like to update the french dictionary or use it?");
                 Console.WriteLine("To update, Enter 1");
                 Console.WriteLine("To use it, enter 2");
                 Console.WriteLine("To exit, enter 3");
