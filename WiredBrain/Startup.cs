@@ -1,4 +1,5 @@
-﻿using Microsoft.Owin;
+﻿using Microsoft.AspNet.SignalR;
+using Microsoft.Owin;
 using Owin;
 using WiredBrain.Connections;
 
@@ -9,8 +10,11 @@ namespace WiredBrain
     {
         public void Configuration(IAppBuilder app)
         {
-            app.MapSignalR();
-            //app.MapSignalR<CoffeeConnection>("/coffee");
+            app.MapAzureSignalR("Coffee");
+
+            //var redisConnectionString = "pluralsight.redis.cache.windows.net:6380,password=[password],ssl=True,abortConnect=False";
+            //GlobalHost.DependencyResolver.UseStackExchangeRedis(
+            //    new RedisScaleoutConfiguration(redisConnectionString, "Coffee"));
         }
     }
 }

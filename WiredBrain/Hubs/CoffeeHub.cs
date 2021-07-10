@@ -1,15 +1,16 @@
-﻿using System;
+﻿using Microsoft.AspNet.SignalR;
+using System;
 using System.Threading.Tasks;
-using Microsoft.AspNet.SignalR;
+
 using WiredBrain.Helpers;
 using WiredBrain.Models;
 
 namespace WiredBrain.Hubs
 {
-    // What we call this in programing : // public class CoffeeHub : Hub
-    public class CoffeeHub: Hub<ICoffeeClient>
+    // What we call this in programing : public class CoffeeHub : Hub
+    public class CoffeeHub : Hub<ICoffeeClient>
     {
-        private static readonly OrderChecker _orderChecker = 
+        private static readonly OrderChecker _orderChecker =
             new OrderChecker(new Random());
 
         public async Task GetUpdateForOrder(Order order)
