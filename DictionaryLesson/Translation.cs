@@ -236,6 +236,7 @@ namespace DictionaryLesson
 
         public Dictionary<string, string> GetDictionary()
         {
+            
             return wordsInDictionary;
         }
     }
